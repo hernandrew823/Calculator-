@@ -5,13 +5,27 @@
 
 
 .container {
+    display: flex;
+   
+    
+}
+
+#extraSpace {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
-.calcKey { 
-    margin: 0;
+#calcKey { 
+   
     background-color: darkgray;
-    height: calc(960px/var(--grid-rows));
+    border-style: solid;
+    border-color: aqua;    
+}
+
+#showInput {
+    display: flex;
+    background-color: black;
+    border-style: solid;
+    border-color: aqua;    
 }
