@@ -22,6 +22,7 @@ space.style.setProperty('--grid-columns', y);
 
 for ( let c = 0; c < ( x * y); c++) {
     const filling = document.createElement("div"); 
+    filling.innerText = (c + 1); 
 calculator.appendChild(filling).className = "button";
 filling.setAttribute("id", "calcKey");
 
@@ -31,4 +32,4 @@ filling.setAttribute("id", "calcKey");
 
 }
 
-makeRows(4, 4)
+makeRows(4, 4);
