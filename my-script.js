@@ -2,8 +2,12 @@
 const space = document.createElement("div");
 space.setAttribute("id", "calculator");
 space.setAttribute("class", "container");
-const getCalc = document.getElementsById("calculator");
+const getCalc = document.getElementById("calculator");
 const getCont = document.querySelector(".container");
+
+//Append Parent to Document
+document.body.appendChild(space);
+
 
 //Create Display Children 
 const display = document.createElement("div"); 
@@ -26,3 +30,5 @@ filling.setAttribute("id", "calcKey");
 
 
 }
+
+makeRows(4, 4)
