@@ -1,62 +1,129 @@
-:root {
-    --grid-cols: 1; 
-    --grid-rows: 1;
-}
 
 
-.container {
-    display: flex;
-    flex-direction: column-reverse;
-   justify-content: space-between;
+
+.keyContainer {
+    display: grid;
    border-style: solid;
    border-color: aqua;  
    padding: auto;
-   width: fit-content
-;
+   width: fit-content;
+}
 
    
-    
-}
-
-.otherBut {
-   display: grid;
-    background-color:darkgray;
-    border-style: solid;
-    border-color: aqua;
-    grid-template-rows: repeat(var(--grid-rows), auto);
-    grid-template-columns: repeat(var(--grid-cols), auto)
-}
 
 
-#bigTop {
-    display: flex;
-    flex-direction: column;
-    border-style: solid;
-    border-color: aqua;
-    font-size:xx-large;
-}
 
 
-#extraSpace {
-    display: grid;
-    flex-direction: row;
-    grid-template-rows: repeat(var(--grid-rows), auto);
-    grid-template-columns: repeat(var(--grid-cols), auto);
-    
-}
 
-#calcKey { 
-   
+
+
+.button {
     background-color: darkgray;
     border-style: solid;
-    border-color: aqua;    
-    
+    border-color: aqua;   
 }
 
-#showInput {
-    
-    background-color: black;
-    width:  250px;
-    height: 75px;
-    overflow: hidden;
+
+#calcKey7 { 
+   grid-column-start: 1;
+   grid-column-end: 2;
+   grid-row-start: 1;
+   grid-row-end:2 ;
+
+}
+
+#calcKey8 {   
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end:2 ;}
+#calcKey9 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end:2 ;
+
+}
+#calcKey6 {
+    grid-column-start: 3;
+   grid-column-end: 4;
+   grid-row-start: 2;
+   grid-row-end: 3;
+}
+#calcKey5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end:2 ;
+
+}
+#calcKey4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3 ;
+}
+#calcKey3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+#calcKey2 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+#calcKey1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4 ;
+}
+#calcKey0 { grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 5 ;}
+#calcKeyDot {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+#calcKeyEqual {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5 ;
+}
+#calcKeyPlus {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2 ;
+}
+#calcKeyMinus {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end:3 ;
+}
+#calcKeyTimes {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end:4;
+}
+#calcKeyDivide {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5 ;
+}
+#calcKeyClear {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 6;
 }
