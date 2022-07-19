@@ -6,14 +6,43 @@
 
 .container {
     display: flex;
+    flex-direction: column-reverse;
+   justify-content: space-between;
+   border-style: solid;
+   border-color: aqua;  
+   padding: auto;
+   width: fit-content
+;
+
    
     
 }
 
+.otherBut {
+   display: grid;
+    background-color:darkgray;
+    border-style: solid;
+    border-color: aqua;
+    grid-template-rows: repeat(var(--grid-rows), auto);
+    grid-template-columns: repeat(var(--grid-cols), auto)
+}
+
+
+#bigTop {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: aqua;
+    font-size:xx-large;
+}
+
+
 #extraSpace {
     display: grid;
-    grid-template-rows: repeat(var(--grid-rows), 1fr);
-    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    flex-direction: row;
+    grid-template-rows: repeat(var(--grid-rows), auto);
+    grid-template-columns: repeat(var(--grid-cols), auto);
+    
 }
 
 #calcKey { 
@@ -21,11 +50,13 @@
     background-color: darkgray;
     border-style: solid;
     border-color: aqua;    
+    
 }
 
 #showInput {
-    display: flex;
+    
     background-color: black;
-    border-style: solid;
-    border-color: aqua;    
+    width:  250px;
+    height: 75px;
+    overflow: hidden;
 }
