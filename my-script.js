@@ -6,7 +6,7 @@ var e = [];
 var answr = 0;
 
 //display 
-document.getElementById('screen').innerHTML = 0
+
 
 
 
@@ -16,61 +16,61 @@ function touchA() {
     document.getElementById("calcKey1").addEventListener( "click", function(){
     if ( o.length < 1) {
         a.push(1);
-    console.log(a);
+        document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey2").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(2);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey3").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(3);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey4").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(4);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey5").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(5);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey6").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(6);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey7").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(7);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey8").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(8);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey9").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(9);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 document.getElementById("calcKey0").addEventListener( "click", function(){
     if ( o.length < 1) {
     a.push(0);
-    console.log(a);
+    document.getElementById('screen').innerHTML = a;
 }})
 
 }
