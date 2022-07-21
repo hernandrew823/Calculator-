@@ -5,6 +5,12 @@ var o = [];
 var e = [];
 var answr = 0;
 
+//display 
+document.getElementById('screen').innerHTML = 0
+
+
+
+
 //Event listner A
 function touchA() { 
     document.getElementById("calcKey1").addEventListener( "click", function(){
@@ -167,12 +173,23 @@ function touchE() {
     document.getElementById('calcKeyEqual').addEventListener( "click", function(){
    e.push("=");
    if ( b.length > 0 && o == "+") { answr += ((parseInt(a.join())) + (parseInt(b.join()))); 
-    console.log(answr);
-
-   }
-
-})
+    console.log(answr); 
 }
+   if ( b.length > 0 && o == "-") { answr += ((parseInt(a.join())) - (parseInt(b.join())))
+    console.log(answr)
+}
+
+
+   if ( b.length > 0 && o == "*") {answr += ((parseInt(a.join())) * (parseInt(b.join())))
+    console.log(answr)
+}
+
+   if ( b.length > 0 && o == "/") { answr += ((parseInt(a.join())) / (parseInt(b.join())))
+   console.log(answr)
+}})
+}
+
+
 
 touchA();
 touchO();
