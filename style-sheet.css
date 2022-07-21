@@ -1,12 +1,29 @@
 
+.container {
+    display: flex; 
+    flex-direction: column;
+    border-style: solid;
+    border-color: aqua;
+    width: 20%;
+    height: 25%;
+    background-color: aqua;
 
+}
+.display { length: 1fr; 
+    width: 1fr;
+    background-color: black;
+    color: chartreuse;
+    font-size: large;
+    
+
+}
 
 .keyContainer {
     display: grid;
    border-style: solid;
    border-color: aqua;  
    padding: auto;
-   width: fit-content;
+   width: 1fr;
 }
 
    
@@ -18,9 +35,11 @@
 
 
 .button {
+    display: flex;
     background-color: darkgray;
     border-style: solid;
     border-color: aqua;   
+   align-items: center;
 }
 
 
