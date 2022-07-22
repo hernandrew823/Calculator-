@@ -3,7 +3,9 @@ var a = [];
 var b = [];
 var o = []; 
 var e = [];
-var answr = 0;
+var stringA = [];
+var stringB = [];
+var answr = [];
 
 //display 
 
@@ -193,7 +195,12 @@ function touchB() {
 function touchE() { 
     document.getElementById('calcKeyEqual').addEventListener( "click", function(){
    e.push("=");
-   if ( b.length > 0 && o == "+") { answr += ((parseInt(a.join())) + (parseInt(b.join()))); 
+   if ( b.length > 0 && o == "+") { stringA.push(a.join(''))
+   console.log(stringA);
+   stringB.push(b.join(''));
+   console.log(stringB);
+    answr.push((parseInt(stringA,10)) + (parseInt(stringB, 10))); 
+
     console.log(answr); 
     document.getElementById('screen').innerHTML = answr;
 
@@ -217,7 +224,6 @@ function touchE() {
 
 }})
 }
-
 
 
 touchA();
