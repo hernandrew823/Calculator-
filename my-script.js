@@ -195,7 +195,8 @@ function touchB() {
 function touchE() { 
     document.getElementById('calcKeyEqual').addEventListener( "click", function(){
    e.push("=");
-   if ( b.length > 0 && o == "+") { stringA.push(a.join(''))
+   if ( b.length > 0 && o == "+") { 
+    stringA.push(a.join(''));
    console.log(stringA);
    stringB.push(b.join(''));
    console.log(stringB);
@@ -205,22 +206,42 @@ function touchE() {
     document.getElementById('screen').innerHTML = answr;
 
 }
-   if ( b.length > 0 && o == "-") { answr += ((parseInt(a.join())) - (parseInt(b.join())))
-    console.log(answr);
+   if ( b.length > 0 && o == "-") {
+
+    stringA.push(a.join(''));
+   console.log(stringA);
+   stringB.push(b.join(''));
+   console.log(stringB);
+    answr.push((parseInt(stringA,10)) - (parseInt(stringB, 10))); 
+
+    console.log(answr); 
     document.getElementById('screen').innerHTML = answr;
 
 }
 
 
-   if ( b.length > 0 && o == "*") {answr += ((parseInt(a.join())) * (parseInt(b.join())))
-    console.log(answr);
+   if ( b.length > 0 && o == "*") {
+    stringA.push(a.join(''));
+   console.log(stringA);
+   stringB.push(b.join(''));
+   console.log(stringB);
+    answr.push((parseInt(stringA,10)) * (parseInt(stringB, 10))); 
+
+    console.log(answr); 
     document.getElementById('screen').innerHTML = answr;
+
 
 }
 
-   if ( b.length > 0 && o == "/") { answr += ((parseInt(a.join())) / (parseInt(b.join())))
-   console.log(answr);
-   document.getElementById('screen').innerHTML = answr;
+   if ( b.length > 0 && o == "/") { 
+    stringA.push(a.join(''));
+   console.log(stringA);
+   stringB.push(b.join(''));
+   console.log(stringB);
+    answr.push((parseInt(stringA,10)) / (parseInt(stringB, 10))); 
+
+    console.log(answr); 
+    document.getElementById('screen').innerHTML = answr;
 
 }})
 }
