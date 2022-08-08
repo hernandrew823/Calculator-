@@ -82,7 +82,7 @@ document.getElementById("calcKey0").addEventListener( "click", function(){
 //touchA();
 
 // event listner o 
-
+// store operators
 function touchO() { 
 
 
@@ -192,7 +192,7 @@ function touchB() {
     }})
     } 
 
-function touchE() { 
+function operator() { 
     document.getElementById('calcKeyEqual').addEventListener( "click", function(){
    e.push("=");
    if ( b.length > 0 && o == "+") { 
@@ -250,7 +250,7 @@ function touchE() {
 touchA();
 touchO();
 touchB();
-touchE();
+operator();
 
 //})
 //document.getElementById().addEventListener( "click", function(){
