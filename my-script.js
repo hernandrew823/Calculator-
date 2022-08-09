@@ -10,8 +10,12 @@ var answr = [];
 //display 
 
 function showMe() { 
+    
+    document.getElementById('screen').innerHTML = '0';
+
     if (o.length < 1) {
         document.getElementById('screen').innerHTML = a.join('');
+        
     }
     else if (a.length >= 1 && b.length < 1) {
         document.getElementById('screen').innerHTML = o.join('')
@@ -19,12 +23,14 @@ function showMe() {
     else if ( o.length >= 1 ) {
         document.getElementById('screen').innerHTML = b.join('')
     }
+    
 }
 
 
 
 
-
+// should i combine the three touch functions into one function? 
+//will loop allow me to chain operations? recursive loop? 
 //Event listner A
 function touchA() { 
     document.getElementById("calcKey1").addEventListener( "click", function(){
@@ -240,10 +246,16 @@ function operator() {
    console.log(stringA);
    stringB.push(b.join(''));
    console.log(stringB);
-    answr.push((parseInt(stringA,10)) + (parseInt(stringB, 10))); 
+    answr.splice(0, answr.length, ((parseInt(stringA,10)) + (parseInt(stringB, 10)))); 
+    a.splice(0, a.length, ...answr)
+    b.splice(0, b.length);
+    o.splice(0, o.length);
+    console.log(a);
+    
+    console.log(b);
+    console.log(o);
 
-    console.log(answr); 
-    document.getElementById('screen').innerHTML = answr;
+    document.getElementById('screen').innerHTML = a;
 
 }
    if ( b.length > 0 && o == "-") {
@@ -252,10 +264,16 @@ function operator() {
    console.log(stringA);
    stringB.push(b.join(''));
    console.log(stringB);
-    answr.push((parseInt(stringA,10)) - (parseInt(stringB, 10))); 
+    answr.splice(0, answr.length, ((parseInt(stringA,10)) - (parseInt(stringB, 10)))); 
+    a.splice(0, a.length, ...answr)
+    b.splice(0, b.length);
+    o.splice(0, o.length);
+    console.log(a);
+     
+    console.log(b);
+    console.log(o);
 
-    console.log(answr); 
-    document.getElementById('screen').innerHTML = answr;
+    document.getElementById('screen').innerHTML = a;
 
 }
 
@@ -265,10 +283,16 @@ function operator() {
    console.log(stringA);
    stringB.push(b.join(''));
    console.log(stringB);
-    answr.push((parseInt(stringA,10)) * (parseInt(stringB, 10))); 
+    answr.splice(0, answr.length, ((parseInt(stringA,10)) * (parseInt(stringB, 10)))); 
+    a.splice(0, a.length, ...answr)
+    b.splice(0, b.length);
+    o.splice(0, o.length);
+    console.log(a);
+   
+    console.log(b);
+    console.log(o);
 
-    console.log(answr); 
-    document.getElementById('screen').innerHTML = answr;
+    document.getElementById('screen').innerHTML = a;
 
 
 }
@@ -278,15 +302,20 @@ function operator() {
    console.log(stringA);
    stringB.push(b.join(''));
    console.log(stringB);
-    answr.push((parseInt(stringA,10)) / (parseInt(stringB, 10))); 
+    answr.splice(0, answr.length, ((parseInt(stringA,10)) / (parseInt(stringB, 10)))); 
+    a.splice(0, a.length, ...answr)
+    b.splice(0, b.length);
+    o.splice(0, o.length);
+    console.log(a);
+    
+    console.log(b);
+    console.log(o);
 
-    console.log(answr); 
-    document.getElementById('screen').innerHTML = answr;
+    document.getElementById('screen').innerHTML = a;
 
 }})
 }
 
-showMe();
 touchA();
 touchO();
 touchB();

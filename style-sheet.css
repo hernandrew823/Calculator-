@@ -9,12 +9,14 @@
     background-color: aqua;
 
 }
-.display { length: 1fr; 
+.display { display: flex;
+    height: 1fr;
     width: 1fr;
     background-color: black;
     color: chartreuse;
     font-size: large;
     
+   
 
 }
 
