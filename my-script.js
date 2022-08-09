@@ -247,15 +247,16 @@ function operator() {
    stringB.push(b.join(''));
    console.log(stringB);
     answr.splice(0, answr.length, ((parseInt(stringA,10)) + (parseInt(stringB, 10)))); 
-    a.splice(0, a.length, ...answr)
+    stringA.splice(0, stringA.length, ...answr);
+    stringB.splice(0, stringB.length);
     b.splice(0, b.length);
     o.splice(0, o.length);
     console.log(a);
-    
+    console.log(answr)
     console.log(b);
     console.log(o);
 
-    document.getElementById('screen').innerHTML = a;
+    document.getElementById('screen').innerHTML = answr;
 
 }
    if ( b.length > 0 && o == "-") {
@@ -265,15 +266,16 @@ function operator() {
    stringB.push(b.join(''));
    console.log(stringB);
     answr.splice(0, answr.length, ((parseInt(stringA,10)) - (parseInt(stringB, 10)))); 
-    a.splice(0, a.length, ...answr)
+    stringA.splice(0, stringA.length, ...answr);
+    stringB.splice(0, stringB.length);
     b.splice(0, b.length);
     o.splice(0, o.length);
     console.log(a);
-     
+    console.log(answr)
     console.log(b);
     console.log(o);
 
-    document.getElementById('screen').innerHTML = a;
+    document.getElementById('screen').innerHTML = answr;
 
 }
 
@@ -283,16 +285,18 @@ function operator() {
    console.log(stringA);
    stringB.push(b.join(''));
    console.log(stringB);
-    answr.splice(0, answr.length, ((parseInt(stringA,10)) * (parseInt(stringB, 10)))); 
+    answr.splice(0, answr.length, ((parseInt(stringA,10)) * (parseInt(stringB, 10)))); // string keeps repeating so answer does nto change from first operation
     a.splice(0, a.length, ...answr)
+    stringA.splice(0, stringA.length, ...answr)
+    stringB.splice(0, stringB.length);
     b.splice(0, b.length);
     o.splice(0, o.length);
     console.log(a);
-   
+    console.log(answr)
     console.log(b);
     console.log(o);
 
-    document.getElementById('screen').innerHTML = a;
+    document.getElementById('screen').innerHTML = answr;
 
 
 }
@@ -303,15 +307,16 @@ function operator() {
    stringB.push(b.join(''));
    console.log(stringB);
     answr.splice(0, answr.length, ((parseInt(stringA,10)) / (parseInt(stringB, 10)))); 
-    a.splice(0, a.length, ...answr)
+    stringA.splice(0, stringA.length, ...answr);
+    stringB.splice(0, stringB.length);
     b.splice(0, b.length);
     o.splice(0, o.length);
     console.log(a);
-    
+    console.log(answr)
     console.log(b);
     console.log(o);
 
-    document.getElementById('screen').innerHTML = a;
+    document.getElementById('screen').innerHTML = answr;
 
 }})
 }
