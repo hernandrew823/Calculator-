@@ -126,30 +126,67 @@ function touchO() {
 //    a.push(1);
 //})
 document.getElementById("calcKeyPlus").addEventListener( "click", function(){
-    if (a.length >= 1) {
+    if (a.length >= 1 && o.length < 1) {
     o.push('+');
     console.log(o);
     showMe();
    
+}
+else if (a.length >= 1 && o.length >= 1 ) {
+    o.splice (0, o.length, '+');
+    showMe();
+    console.log(answr);
+    console.log(stringA);
+
+
+
 }})
 document.getElementById("calcKeyMinus").addEventListener( "click", function(){
-    if (a.length >= 1)  {
+    if (a.length >= 1 && o.length < 1)  {
     o.push('-');
   console.log(o);
   showMe();
  
+}
+else if (a.length >= 1 && o.length >= 1 ) {
+    o.splice (0, o.length, '-');
+    showMe();
+    console.log(o);
+    console.log(answr);
+    console.log(stringA)
+
 }})
 document.getElementById("calcKeyTimes").addEventListener( "click", function(){
-    if (a.length >= 1) {
+    if (a.length >= 1 && o.length < 1) {
     o.push('*');
 console.log(o);
 showMe();
 
+}
+else if (a.length >= 1 && o.length >= 1 ) {
+    o.splice (0, o.length, '*');
+    showMe();
+    console.log(o);
+    console.log(answr);
+    console.log(stringA);
+
+
 }})
 document.getElementById("calcKeyDivide").addEventListener( "click", function(){
-    if (a.length >= 1)  { o.push('/');
+    if (a.length >= 1 && o.length < 1)  { o.push('/');
 console.log(o);
 showMe();
+console.log(o);
+
+
+}
+else if (a.length >= 1 && o.length >= 1 ) {
+    o.splice (0, o.length, '/');
+    showMe();
+    console.log(o)
+    console.log(answr);
+    console.log(stringA)
+
 
 }})
 }
@@ -161,6 +198,7 @@ function touchB() {
         if (o.length >= 1){
         b.push(1);
         console.log(b);
+        console.log(answr);
         showMe();
        
     }})
@@ -169,6 +207,7 @@ function touchB() {
         if (o.length >= 1) {
         b.push(2);
         console.log(b);
+        console.log(answr);
         showMe();
         
 
@@ -178,6 +217,7 @@ function touchB() {
         if (o.length >= 1) {
         b.push(3);
         console.log(b);
+        console.log(answr);
         showMe();
        
 
@@ -187,6 +227,7 @@ function touchB() {
         if (o.length >= 1) {
         b.push(4);
         console.log(b);
+        console.log(answr);
         showMe();
       
 
@@ -195,6 +236,7 @@ function touchB() {
         if (o.length >= 1) {
         b.push(5);
         console.log(b);
+        console.log(answr);
         showMe();
     }})
     
@@ -202,6 +244,7 @@ function touchB() {
         if (o.length >= 1) {
         b.push(6);
         console.log(b);
+        console.log(answr);
         showMe();
 
     }})
@@ -217,6 +260,7 @@ function touchB() {
         if (o.length >= 1) {
         b.push(8);
         console.log(b);
+        console.log(answr);
         showMe();
 
     }})
@@ -225,6 +269,7 @@ function touchB() {
         if (o.length >= 1) {
         b.push(9);
         console.log(b);
+        console.log(answr);
         showMe(); 
 
     }})
@@ -233,14 +278,16 @@ function touchB() {
         if (o.length >= 1) {
         b.push(0);
         console.log(b);
+        console.log(answr);
         showMe();
 
     }})
     } 
 
 function operator() { 
-    document.getElementById('calcKeyEqual').addEventListener( "click", function(){
-   e.push("=");
+    document.querySelectorAll('.op').forEach( item => { 
+        item.addEventListener('click', event => {
+    
    if ( b.length > 0 && o == "+") { 
     stringA.push(a.join(''));
    console.log(stringA);
@@ -250,7 +297,6 @@ function operator() {
     stringA.splice(0, stringA.length, ...answr);
     stringB.splice(0, stringB.length);
     b.splice(0, b.length);
-    o.splice(0, o.length);
     console.log(a);
     console.log(answr)
     console.log(b);
@@ -269,7 +315,6 @@ function operator() {
     stringA.splice(0, stringA.length, ...answr);
     stringB.splice(0, stringB.length);
     b.splice(0, b.length);
-    o.splice(0, o.length);
     console.log(a);
     console.log(answr)
     console.log(b);
@@ -290,7 +335,6 @@ function operator() {
     stringA.splice(0, stringA.length, ...answr)
     stringB.splice(0, stringB.length);
     b.splice(0, b.length);
-    o.splice(0, o.length);
     console.log(a);
     console.log(answr)
     console.log(b);
@@ -310,7 +354,6 @@ function operator() {
     stringA.splice(0, stringA.length, ...answr);
     stringB.splice(0, stringB.length);
     b.splice(0, b.length);
-    o.splice(0, o.length);
     console.log(a);
     console.log(answr)
     console.log(b);
@@ -319,6 +362,7 @@ function operator() {
     document.getElementById('screen').innerHTML = answr;
 
 }})
+    })
 }
 
 touchA();

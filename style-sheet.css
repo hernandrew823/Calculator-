@@ -32,7 +32,13 @@
 
 
 
+.op {  display: flex;
+    
+    border-style: solid;
+    border-width: thin;
+    
 
+}
 
 
 
