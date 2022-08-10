@@ -322,7 +322,9 @@ function operator() {
 
     document.getElementById('screen').innerHTML = answr;
 
-}
+}                  // stringA and stringB not clearing when different operator is used
+                // operator is switching to next operator key before the first stored operator can perform its operation 
+                // ex 3 + 3 - 2 = -2
 
 
    if ( b.length > 0 && o == "*") {
