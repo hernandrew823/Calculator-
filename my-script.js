@@ -133,10 +133,11 @@ document.getElementById("calcKeyPlus").addEventListener( "click", function(){
    
 }
 else if (a.length >= 1 && o.length >= 1 ) {
-    o.splice (0, o.length, '+');
+    o.push('+');
     showMe();
     console.log(answr);
     console.log(stringA);
+    console.log(o);
 
 
 
@@ -149,7 +150,7 @@ document.getElementById("calcKeyMinus").addEventListener( "click", function(){
  
 }
 else if (a.length >= 1 && o.length >= 1 ) {
-    o.splice (0, o.length, '-');
+    o.push('-');
     showMe();
     console.log(o);
     console.log(answr);
@@ -164,7 +165,7 @@ showMe();
 
 }
 else if (a.length >= 1 && o.length >= 1 ) {
-    o.splice (0, o.length, '*');
+    o.push('*');
     showMe();
     console.log(o);
     console.log(answr);
@@ -173,7 +174,8 @@ else if (a.length >= 1 && o.length >= 1 ) {
 
 }})
 document.getElementById("calcKeyDivide").addEventListener( "click", function(){
-    if (a.length >= 1 && o.length < 1)  { o.push('/');
+    if (a.length >= 1 && o.length < 1)  { 
+o.push('/');
 console.log(o);
 showMe();
 console.log(o);
@@ -181,7 +183,7 @@ console.log(o);
 
 }
 else if (a.length >= 1 && o.length >= 1 ) {
-    o.splice (0, o.length, '/');
+    o.push('/');
     showMe();
     console.log(o)
     console.log(answr);
@@ -284,11 +286,11 @@ function touchB() {
     }})
     } 
 
-function operator() { 
+function operator() {                                               //does not activate touchA once answr is populated
     document.querySelectorAll('.op').forEach( item => { 
         item.addEventListener('click', event => {
     
-   if ( b.length > 0 && o == "+") { 
+   if ( b.length > 0 && o == "+" || b.length > 0 && o[1] == "+") { 
     stringA.push(a.join(''));
    console.log(stringA);
    stringB.push(b.join(''));
@@ -305,7 +307,7 @@ function operator() {
     document.getElementById('screen').innerHTML = answr;
 
 }
-   if ( b.length > 0 && o == "-") {
+   if ( b.length > 0 && o == "-" || b.length > 0 && o[1] == "-") {
 
     stringA.push(a.join(''));
    console.log(stringA);
@@ -327,7 +329,7 @@ function operator() {
                 // ex 3 + 3 - 2 = -2
 
 
-   if ( b.length > 0 && o == "*") {
+   if ( b.length > 0 && o[0] == "*" || b.length > 0 && o[1] == "*") {
     stringA.push(a.join(''));
    console.log(stringA);
    stringB.push(b.join(''));
@@ -347,7 +349,7 @@ function operator() {
 
 }
 
-   if ( b.length > 0 && o == "/") { 
+   if ( b.length > 0 && o == "/" || b.length > 0 && o[1] == "/") { 
     stringA.push(a.join(''));
    console.log(stringA);
    stringB.push(b.join(''));
