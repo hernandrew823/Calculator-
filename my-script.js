@@ -105,7 +105,7 @@ document.getElementById("calcKey8").addEventListener( "click", function(){
 }})
 
 document.getElementById("calcKey9").addEventListener( "click", function(){
-    if ( exOne.length < 1 && o1.length <1) {
+    if ( exOne.length < 1 && o1.length < 1) {
     a1.push(9);
     console.log(a1);
     showMe();
@@ -114,7 +114,7 @@ document.getElementById("calcKey9").addEventListener( "click", function(){
 }})
 
 document.getElementById("calcKey0").addEventListener( "click", function(){
-    if ( exOne.length < 1 && o1.length <1) {
+    if ( exOne.length < 1 && o1.length < 1) {
     a1.push(0);
     console.log(a1);
     showMe();
@@ -122,14 +122,18 @@ document.getElementById("calcKey0").addEventListener( "click", function(){
     
 }})
 
+document.getElementById("calcKeyDot").addEventListener ("click", function(){ 
+    if (exOne.length < 1 && o1.length < 1) {
+        a1.push(".");
+        console.log(a1);
+        showMe(); 
+    }
+} )
+
 }
 
 
 
-//touchA();
-
-// event listner o 
-// store operators
 
 function touchO() { 
 
@@ -371,12 +375,22 @@ else if (a2.length >= 1){
         if (o1.length >= 1) {
         b1.push(0);
         console.log(b1);
-        showMe();
-    } 
+        showMe();} 
 
     else if (a2.length >= 1) { 
         b2.push(0);
         console.log(b2); 
+        showMe();}})
+    
+    document.getElementById("calcKeyDot").addEventListener( "click", function(){
+    if (o1.length >= 1) {
+        b1.push('.');
+        console.log(b1);
+        showMe();}
+    
+    else if (a2.length >= 1) {
+        b2.push('.');
+        console.log(b2);
         showMe();}})
     
 
@@ -384,7 +398,7 @@ function operator() {                                               //does not a
     document.querySelectorAll('.op').forEach( item => { 
         item.addEventListener('click', event => {
     
-   if ( b1.length >= 1 && o1 == "+") { 
+   if ( b1.length >= 1 && o1 == "+" && o2.length >1) { 
     a1.push(a1.join(''));
    console.log(a1);
    b1.splice(0, b1.length, (b1.join('')));
