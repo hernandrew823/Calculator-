@@ -157,54 +157,79 @@ else if (o2.length >= 1) {
 }
 })
 document.getElementById("calcKeyMinus").addEventListener( "click", function(){
-    if (a.length >= 1 && o.length < 1)  {
-    o.push('-');
-  console.log(o);
-  showMe();
- 
-}
-else if (a.length >= 1 && o.length >= 1 ) {
-    o.splice (1, o.length, '-');
+    if (a1.length >= 1 && o1.length < 1) {
+        o1.push('-');
+        console.log(o1);
         showMe();
-    console.log(o);
-    console.log(answr);
-    console.log(stringA)
-
-}})
+       
+    }
+    else if (b1.length >= 1 ) {
+        o2.push('-');
+            showMe();
+        console.log(exOne);
+        console.log(a2);
+        console.log(o2);
+    
+    
+    
+    }
+    else if (o2.length >= 1) {
+        o1.push('-');
+        showMe();
+        console.log(o2);
+        console.log(o1);
+        showMe();
+    }
+    })
 document.getElementById("calcKeyTimes").addEventListener( "click", function(){
-    if (a.length >= 1 && o.length < 1) {
-    o.push('*');
-console.log(o);
-showMe();
-
-}
-else if (a.length >= 1 && o.length >= 1 ) {
-    o.splice (1, o.length, '*');
-    showMe();
-    console.log(o);
-    console.log(answr);
-    console.log(stringA);
-
-
-}})
+    if (a1.length >= 1 && o1.length < 1) {
+        o1.push('*');
+        console.log(o1);
+        showMe();
+       
+    }
+    else if (b1.length >= 1 ) {
+        o2.push('*');
+            showMe();
+        console.log(exOne);
+        console.log(a2);
+        console.log(o2);
+    
+    
+    
+    }
+    else if (o2.length >= 1) {
+        o1.push('*');
+        
+        console.log(o2);
+        console.log(o1);
+        showMe();
+    }
+    })
 document.getElementById("calcKeyDivide").addEventListener( "click", function(){
-    if (a.length >= 1 && o.length < 1)  { 
-o.push('/');
-console.log(o);
-showMe();
-console.log(o);
-
-
-}
-else if (a.length >= 1 && o.length >= 1 ) {
-    o.splice (1, o.length, '/');
-    showMe();
-    console.log(o)
-    console.log(answr);
-    console.log(stringA)
-
-
-}})
+    if (a1.length >= 1 && o1.length < 1) {
+        o1.push('/');
+        console.log(o1);
+        showMe();
+       
+    }
+    else if (b1.length >= 1 ) {
+        o2.push('/');
+            showMe();
+        console.log(exOne);
+        console.log(a2);
+        console.log(o2);
+    
+    
+    
+    }
+    else if (o2.length >= 1) {
+        o1.push('/');
+        showMe();
+        console.log(o2);
+        console.log(o1);
+    }
+    })
 }
 
 //Event Listener B
@@ -380,144 +405,129 @@ else if (b2 >= 1 && o2 == "+") {
 
 }
 
-else if (b.length > 0 && o[1] == "+" && o.length > 1) { 
-    o.splice (1, o.length, '+')
-    stringA.push(a.join(''));
+else if ( b1.length >= 1 && o1 == "-") { 
+    a1.splice(0, a1.length, (a1.join('')));
+   console.log(a1);
+   b1.splice(0, b1.length, (b1.join('')));
+   console.log(b1);
+    exOne.splice(0, exOne.length, ((parseInt(a1,10)) - (parseInt(b1, 10)))); 
+    a2.splice(0, a2.length, ...exOne);
+    a1.splice(0, a1.length);
+    o1.splice(0, o1.length);
+    b1.splice(0, b1.length);
+    console.log(a1);
+    console.log(exOne)
+    console.log(b1);
+    console.log(o1);
+    console.log(o2);
+    console.log(a2)
 
-    console.log(stringA);
-   stringB.push(b.join(''));
-   console.log(stringB);
-    answr.splice(0, answr.length, ((parseInt(stringA,10)) + (parseInt(stringB, 10)))); 
-    stringA.splice(0, stringA.length, ...answr);
-    stringB.splice(0, stringB.length);
-    o.splice(0, o.length);
-    b.splice(0, b.length);
-    console.log(stringA);
-    console.log(a);
-    console.log(answr)
-    console.log(b);
-    console.log(o);
-
-    document.getElementById('screen').innerHTML = answr;
-
-
-}
-   else if ( b.length > 0 && o[0] == "-" && o.length < 2) {
-
-    stringA.push(a.join(''));
-
-    console.log(stringA);
-   console.log(stringA);
-   stringB.push(b.join(''));
-   console.log(stringB);
-    answr.splice(0, answr.length, ((parseInt(stringA,10)) - (parseInt(stringB, 10)))); 
-    stringA.splice(0, stringA.length, ...answr);
-    stringB.splice(0, stringB.length);
-    b.splice(0, b.length);
-    console.log(a);
-    console.log(answr)
-    console.log(b);
-    console.log(o);
-
-    document.getElementById('screen').innerHTML = answr;
-
-}                  // stringA and stringB not clearing when different operator is used
-                // operator is switching to next operator key before the first stored operator can perform its operation 
-                // ex 3 + 3 - 2 = -2
-else if (b.length > 0 && o[1] == "-") { 
-    o.splice (1, o.length, '-')
-    stringA.push(a.join(''));
-
-    console.log(stringA);
-   stringB.push(b.join(''));
-   console.log(stringB);
-    answr.splice(0, answr.length, ((parseInt(stringA,10)) - (parseInt(stringB, 10)))); 
-    stringA.splice(0, stringA.length, ...answr);
-    stringB.splice(0, stringB.length);
-    b.splice(0, b.length);
-    console.log(a);
-    console.log(answr)
-    console.log(b);
-    console.log(o);
-
-    document.getElementById('screen').innerHTML = answr;
-}
-
-   else if ( b.length > 0 && o[0] == "*"  && o.length < 2) {
-    stringA.push(a.join(''));
-
-    console.log(stringA);
-   console.log(stringA);
-   stringB.push(b.join(''));
-   console.log(stringB);
-    answr.splice(0, answr.length, ((parseInt(stringA,10)) * (parseInt(stringB, 10)))); // string keeps repeating so answer does nto change from first operation
-    a.splice(0, a.length, ...answr)
-    stringA.splice(0, stringA.length, ...answr)
-    stringB.splice(0, stringB.length);
-    b.splice(0, b.length);
-    console.log(a);
-    console.log(answr)
-    console.log(b);
-    console.log(o);
-
-    document.getElementById('screen').innerHTML = answr;
-
+    document.getElementById('screen').innerHTML = exOne;
 
 }
 
-else if (b.length > 0 && o[1] == "*") { 
-    o.splice (1, o.length, '*')
-    stringA.push(a.join(''));
+else if (b2 >= 1 && o2 == "-") {
 
-    console.log(stringA);
-   stringB.push(b.join(''));
-   console.log(stringB);
-    answr.splice(0, answr.length, ((parseInt(stringA,10)) * (parseInt(stringB, 10)))); 
-    stringA.splice(0, stringA.length, ...answr);
-    stringB.splice(0, stringB.length);
-    b.splice(0, b.length);
-    console.log(a);
-    console.log(answr)
-    console.log(b);
-    console.log(o);
+    a2.splice(0, a1.length, (a2.join('')));
+   console.log(a2);
+   b2.splice(0, b2.length, (b2.join('')));
+   console.log(b2);
+    exTwo.splice(0, exTwo.length, ((parseInt(a2,10)) - (parseInt(b2, 10)))); 
+    a1.splice(0, a1.length, ...exTwo);
+    a2.splice(0, a2.length);
+    o2.splice(0, o2.length);
+    b2.splice(0, b2.length);
+    console.log(a2);
+    console.log(exTwo)
+    console.log(b2);
+    console.log(o2);
+    console.log(o1);
+    console.log(a1)
 
-    document.getElementById('screen').innerHTML = answr;
+    document.getElementById('screen').innerHTML = exTwo;
+}
+else if ( b1.length >= 1 && o1 == "*") { 
+    a1.splice(0, a1.length, (a1.join('')));
+   console.log(a1);
+   b1.splice(0, b1.length, (b1.join('')));
+   console.log(b1);
+    exOne.splice(0, exOne.length, ((parseInt(a1,10)) * (parseInt(b1, 10)))); 
+    a2.splice(0, a2.length, ...exOne);
+    a1.splice(0, a1.length);
+    o1.splice(0, o1.length);
+    b1.splice(0, b1.length);
+    console.log(a1);
+    console.log(exOne)
+    console.log(b1);
+    console.log(o1);
+    console.log(o2);
+    console.log(a2)
+
+    document.getElementById('screen').innerHTML = exOne;
+
 }
 
-   else if ( b.length > 0 && o[0] == "/" && o.length < 2) { 
-    stringA.push(a.join(''));
-   console.log(stringA);
-   stringB.push(b.join(''));
-   console.log(stringB);
-    answr.splice(0, answr.length, ((parseInt(stringA,10)) / (parseInt(stringB, 10)))); 
-    stringA.splice(0, stringA.length, ...answr);
-    stringB.splice(0, stringB.length);
-    b.splice(0, b.length);
-    console.log(a);
-    console.log(answr)
-    console.log(b);
-    console.log(o);
+else if (b2 >= 1 && o2 == "*") {
 
-    document.getElementById('screen').innerHTML = answr;
+    a2.splice(0, a1.length, (a2.join('')));
+   console.log(a2);
+   b2.splice(0, b2.length, (b2.join('')));
+   console.log(b2);
+    exTwo.splice(0, exTwo.length, ((parseInt(a2,10)) * (parseInt(b2, 10)))); 
+    a1.splice(0, a1.length, ...exTwo);
+    a2.splice(0, a2.length);
+    o2.splice(0, o2.length);
+    b2.splice(0, b2.length);
+    console.log(a2);
+    console.log(exTwo)
+    console.log(b2);
+    console.log(o2);
+    console.log(o1);
+    console.log(a1)
+
+    document.getElementById('screen').innerHTML = exTwo;
+}
+
+else if ( b1.length >= 1 && o1 == "/") { 
+    a1.splice(0, a1.length, (a1.join('')));
+   console.log(a1);
+   b1.splice(0, b1.length, (b1.join('')));
+   console.log(b1);
+    exOne.splice(0, exOne.length, ((parseInt(a1,10)) / (parseInt(b1, 10)))); 
+    a2.splice(0, a2.length, ...exOne);
+    a1.splice(0, a1.length);
+    o1.splice(0, o1.length);
+    b1.splice(0, b1.length);
+    console.log(a1);
+    console.log(exOne)
+    console.log(b1);
+    console.log(o1);
+    console.log(o2);
+    console.log(a2)
+
+    document.getElementById('screen').innerHTML = exOne;
 
 }
-else if (b.length > 0 && o[1] == "/") { 
-    o.splice (1, o.length, '/')
-    stringA.push(a.join(''));
 
-    console.log(stringA);
-   stringB.push(b.join(''));
-   console.log(stringB);
-    answr.splice(0, answr.length, ((parseInt(stringA,10)) / (parseInt(stringB, 10)))); 
-    stringA.splice(0, stringA.length, ...answr);
-    stringB.splice(0, stringB.length);
-    b.splice(0, b.length);
-    console.log(a);
-    console.log(answr)
-    console.log(b);
-    console.log(o);
+else if (b2 >= 1 && o2 == "/") {
 
-    document.getElementById('screen').innerHTML = answr;
+    a2.splice(0, a1.length, (a2.join('')));
+   console.log(a2);
+   b2.splice(0, b2.length, (b2.join('')));
+   console.log(b2);
+    exTwo.splice(0, exTwo.length, ((parseInt(a2,10)) / (parseInt(b2, 10)))); 
+    a1.splice(0, a1.length, ...exTwo);
+    a2.splice(0, a2.length);
+    o2.splice(0, o2.length);
+    b2.splice(0, b2.length);
+    console.log(a2);
+    console.log(exTwo)
+    console.log(b2);
+    console.log(o2);
+    console.log(o1);
+    console.log(a1)
+
+    document.getElementById('screen').innerHTML = exTwo;
 }
 })
     })
