@@ -122,15 +122,36 @@ document.getElementById("calcKey0").addEventListener( "click", function(){
     
 }})
 
-document.getElementById("calcKeyDot").addEventListener ("click", function(){ 
-    if (exOne.length < 1 && o1.length < 1) {
-        a1.push(".");
-        console.log(a1);
-        showMe(); 
-    }
-} )
-
+document.getElementById("calcKeyClear").addEventListener( " click", function(){
+ if ( a1.length > 0 || a2.length > 0 || b1.length > 0 || b2.length > 0 || exOne.length > 0 || exTwo.length > 0 || o1.length > 0 || o2.length > 0) 
+    {
+    exOne.splice(0, exOne.length); 
+    a2.splice(0, a2.length);
+    a1.splice(0, a1.length);
+    o1.splice(0, o1.length);
+    o2.splice(0, o2.length);
+    b1.splice(0, b1.length);
+    b2.splice(0, o2.length);
+    exTwo.splice(0, exTwo.length);
+    console.log(a1);
+    console.log(exOne)
+    console.log(b1);
+    console.log(o1);
+    console.log(o2);
+    console.log(a2);
+    showMe();
+}})
 }
+
+//document.getElementById("calcKeyDot").addEventListener ("click", function(){ 
+  //  if (exOne.length < 1 && o1.length < 1) {
+  //      a1.push(".");
+ //       console.log(a1);
+  //      showMe(); 
+ //   }
+//} )
+
+
 
 
 
@@ -250,10 +271,30 @@ document.getElementById("calcKeyDivide").addEventListener( "click", function(){
 
     }
     })
-}
+
+    document.getElementById("calcKeyClear").addEventListener( " click", function(){
+        if ( a1.length > 0 || a2.length > 0 || b1.length > 0 || b2.length > 0 || exOne.length > 0 || exTwo.length > 0 || o1.length > 0 || o2.length > 0) 
+           {
+           exOne.splice(0, exOne.length); 
+           a2.splice(0, a2.length);
+           a1.splice(0, a1.length);
+           o1.splice(0, o1.length);
+           o2.splice(0, o2.length);
+           b1.splice(0, b1.length);
+           b2.splice(0, o2.length);
+           exTwo.splice(0, exTwo.length);
+           console.log(a1);
+           console.log(exOne)
+           console.log(b1);
+           console.log(o1);
+           console.log(o2);
+           console.log(a2);
+           showMe();
+       }})
+       }
 
 //Event Listener B
-function touchB() { 
+function touchB() { {
      
     document.getElementById("calcKey1").addEventListener( "click", function(){
         if (o1.length >= 1){
@@ -392,13 +433,36 @@ else if (a2.length >= 1){
         b2.push('.');
         console.log(b2);
         showMe();}})
+        
+        
+        
+    document.getElementById("calcKeyClear").addEventListener( " click", function(){
+      if ( a1.length > 0 || a2.length > 0 || b1.length > 0 || b2.length > 0 || exOne.length > 0 || exTwo.length > 0 || o1.length > 0 || o2.length > 0) 
+        {
+        exOne.splice(0, exOne.length); 
+        a2.splice(0, a2.length);
+        a1.splice(0, a1.length);
+        o1.splice(0, o1.length);
+        o2.splice(0, o2.length);
+        b1.splice(0, b1.length);
+        b2.splice(0, o2.length);
+        exTwo.splice(0, exTwo.length);
+        console.log(a1);
+        console.log(exOne)
+        console.log(b1);
+        console.log(o1);
+        console.log(o2);
+        console.log(a2);
+        showMe()
+    }})
+}  
     
 
 function operator() {                                               //does not activate touchA once answr is populated
     document.querySelectorAll('.op').forEach( item => { 
         item.addEventListener('click', event => {
     
-   if ( b1.length >= 1 && o1 == "+" && o2.length >1) { 
+   if ( b1.length >= 1 && o1 == "+") { 
     a1.push(a1.join(''));
    console.log(a1);
    b1.splice(0, b1.length, (b1.join('')));
