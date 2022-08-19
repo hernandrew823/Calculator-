@@ -12,7 +12,7 @@ var pO1 = [];
 var eq1 = [];
 var eq2 = [];
 var placeHolder = ['0'];
-
+var dEx = [];
 
 
 //display 
@@ -66,6 +66,8 @@ function touchA() {
     document.getElementById("calcKey1").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(1);
+            dEx.push(1);
+            
             console.log(a1);
             showMe();
 
@@ -75,6 +77,8 @@ function touchA() {
     document.getElementById("calcKey2").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(2);
+            dEx.push(2);
+
             console.log(a1);
             showMe();
 
@@ -85,6 +89,8 @@ function touchA() {
     document.getElementById("calcKey3").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(3);
+            dEx.push(3);
+
             console.log(a1);
             showMe();
         }
@@ -93,6 +99,8 @@ function touchA() {
     document.getElementById("calcKey4").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(4);
+            dEx.push(4);
+            
             console.log(a1);
             showMe();
         }
@@ -101,6 +109,8 @@ function touchA() {
     document.getElementById("calcKey5").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(5);
+            dEx.push(5);
+
             console.log(a1);
             showMe();
         }
@@ -109,6 +119,8 @@ function touchA() {
     document.getElementById("calcKey6").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(6);
+            dEx.push(5);
+
             console.log(a1);
             showMe();
         }
@@ -117,6 +129,8 @@ function touchA() {
     document.getElementById("calcKey7").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(7);
+            dEx.push(7);
+
             console.log(a1);
             showMe();
 
@@ -127,6 +141,8 @@ function touchA() {
     document.getElementById("calcKey8").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(8);
+            dEx.push(8);
+
             console.log(a1);
             showMe();
         }
@@ -135,6 +151,8 @@ function touchA() {
     document.getElementById("calcKey9").addEventListener("click", function () {
         if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(9);
+            dEx.push(9);
+
             console.log(a1);
             showMe();
 
@@ -145,6 +163,8 @@ function touchA() {
     document.getElementById("calcKey0").addEventListener("click", function () {
         if (exOne.length < 1 && o1.length < 1 && a2.length < 1) {
             a1.push(0);
+            dEx.push(0);
+
             console.log(a1);
             showMe();
 
@@ -166,6 +186,7 @@ function touchA() {
         exTwo.splice(0, exTwo.length);
         eq2.splice(0, eq2.length);
         eq1.splice(0, eq1.length);
+        dEx.push(0);
 
 
         console.log(a1);
@@ -175,7 +196,7 @@ function touchA() {
         console.log(o2);
         console.log(a2);
         console.log(cl);
-        showMe(0);
+        showMe();
     })
 }
 
@@ -193,6 +214,8 @@ function touchB() {
         document.getElementById("calcKey1").addEventListener("click", function () {
             if (pO1.length >= 1) {
                 b1.push(1);
+                dEx.push(1);
+                
                 console.log(b1);
                 showMe();
 
@@ -200,6 +223,8 @@ function touchB() {
 
             else if (a2.length >= 1) {
                 b2.push(1);
+                dEx.push(1);
+
                 console.log(b2);
                 showMe();
             }
@@ -208,6 +233,8 @@ function touchB() {
         document.getElementById("calcKey2").addEventListener("click", function () {
             if (pO1.length >= 1) {
                 b1.push(2);
+                dEx.push(2);
+                
                 console.log(b1);
                 showMe();
 
@@ -215,6 +242,8 @@ function touchB() {
             }
             else if (a2.length >= 1) {
                 b2.push(2);
+                dEx.push(2);
+               
                 console.log(b2);
                 showMe();
             }
@@ -223,6 +252,8 @@ function touchB() {
         document.getElementById("calcKey3").addEventListener("click", function () {
             if (pO1.length >= 1) {
                 b1.push(3);
+                dEx.push(3);
+                
                 console.log(b1);
                 showMe();
 
@@ -230,6 +261,8 @@ function touchB() {
             }
             else if (a2.length >= 1) {
                 b2.push(3);
+                dEx.push(3);
+                
                 console.log(b2);
                 showMe();
             }
@@ -239,12 +272,16 @@ function touchB() {
     document.getElementById("calcKey4").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(4);
+            dEx.push(4);
+            
             console.log(b1);
             showMe();
 
 
         } else if (a2.length >= 1) {
             b2.push(4);
+            dEx.push(4);
+            
             console.log(o2);
             console.log(b2);
             console.log(o1);
@@ -257,12 +294,16 @@ function touchB() {
     document.getElementById("calcKey5").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(5);
+            dEx.push(5);
+            
             console.log(b1);
             showMe();
         }
 
         else if (a2.length >= 1) {
             b2.push(5);
+            dEx.push(5);
+            
             console.log(b2);
             showMe();
         }
@@ -271,12 +312,16 @@ function touchB() {
     document.getElementById("calcKey6").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(6);
+            dEx.push(6);
+            
             console.log(b1);
             showMe();
         }
 
         else if (a2.length >= 1) {
             b2.push(6);
+            dEx.push(6);
+            
             console.log(b2);
             showMe();
         }
@@ -285,11 +330,15 @@ function touchB() {
     document.getElementById("calcKey7").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(7);
+            dEx.push(7);
+            
             console.log(b1);
             showMe();
         }
         else if (a2.length >= 1) {
             b2.push(7);
+            dEx.push(7);
+            
             console.log(b2);
             showMe();
         }
@@ -298,6 +347,8 @@ function touchB() {
     document.getElementById("calcKey8").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(8);
+            dEx.push(8);
+            
             console.log(b1);
             showMe();
         }
@@ -305,6 +356,8 @@ function touchB() {
 
         else if (a2.length >= 1) {
             b2.push(8);
+            dEx.push(8);
+            
             console.log(b2);
             console.log(a1);
             console.log(exTwo)
@@ -315,12 +368,16 @@ function touchB() {
     document.getElementById("calcKey9").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(9);
+            dEx.push(9);
+            
             console.log(b1);
             showMe();
         }
 
         else if (a2.length >= 1) {
             b2.push(9);
+            dEx.push(9);
+            
             console.log(b2);
             showMe();
         }
@@ -329,12 +386,16 @@ function touchB() {
     document.getElementById("calcKey0").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(0);
+            dEx.push(0);
+            
             console.log(b1);
             showMe();
         }
 
         else if (a2.length >= 1) {
             b2.push(0);
+            dEx.push(0);
+            
             console.log(b2);
             showMe();
         }
@@ -391,7 +452,12 @@ function touchO() {
 
     document.getElementById("calcKeyPlus").addEventListener("click", function () {
         if (a1.length >= 1 && pO1.length < 1) {
+            dEx.splice(0, dEx.length);
+            
+            dEx.push ('+');
             pO1.push('+');
+            
+            
             console.log(o1);
             console.log(pO1);
             console.log(a1)
@@ -400,9 +466,12 @@ function touchO() {
 
         }
         else if (b1.length >= 1) {
+            dEx.splice(0, dEx.length);
             o1.splice(0, o1.length, ...pO1);
-
+            
+            dEx.push(a2);
             o2.push('+');
+            
             console.log(exOne);
             console.log(pO1)
             console.log(eq2);
@@ -416,7 +485,11 @@ function touchO() {
         }
 
         else if (a2.length >=1 && o2.length < 1) {
+            dEx.splice(0, dEx.length);
+            
+            dEx.push('+');
             o2.push('+');
+            
             console.log(exOne);
             console.log(pO1)
             console.log(eq2);
@@ -426,7 +499,11 @@ function touchO() {
         }
 
         else if (o2.length >= 1) {
+            dEx.splice(0, dEx.length);
+            
+            dEx.push(a1);
             pO1.push('+');
+            
             console.log(o2);
             console.log(o1);
             showMe();
@@ -438,15 +515,22 @@ function touchO() {
 
     document.getElementById("calcKeyMinus").addEventListener("click", function () {
         if (a1.length >= 1 && pO1.length < 1) {
+            dEx.splice(0, dEx.length);
+            
+            dEx.push('-');
             pO1.push('-');
+            
             console.log(o1);
             showMe();
 
         }
         else if (b1.length >= 1) {
+            dEx.splice(0, dEx.length);
             o1.splice(0, o1.length, ...pO1);
-
+            
+            dEx.push(a2);
             o2.push('-');
+
             console.log(exOne);
             console.log(a2);
             console.log(o2);
@@ -457,7 +541,11 @@ function touchO() {
         }
 
         else if (a2.length >=1 && o2.length < 1) {
+            dEx.splice(0, dEx.length);
+            
+            dEx.push('-')
             o2.push('-');
+            
             console.log(exOne);
             console.log(pO1)
             console.log(eq2);
@@ -468,8 +556,11 @@ function touchO() {
 
 
         else if (o2.length >= 1) {
+            dEx.splice(0, dEx.length);
+            
+            dEx.push(a1);
             pO1.push('-');
-            showMe();
+            
             console.log(o2);
             console.log(o1);
             showMe();
@@ -478,15 +569,22 @@ function touchO() {
 
     document.getElementById("calcKeyTimes").addEventListener("click", function () {
         if (a1.length >= 1 && pO1.length < 1) {
+            dEx.splice(0, dEx.length);
+            
+            dEx.push('*')
             pO1.push('*');
+           
             console.log(o1);
             showMe();
 
         }
         else if (b1.length >= 1) {
+            dEx.splice(0, dEx.length);
             o1.splice(0, o1.length, ...pO1);
-
+            
+            dEx.push(a2);
             o2.push('*');
+            
             console.log(exOne);
             console.log(a2);
             console.log(o2);
@@ -498,7 +596,11 @@ function touchO() {
         }
 
         else if (a2.length >=1 && o2.length < 1) {
+            dEx.splice(0, dEx.length);
+            
+            dEx.push('*');
             o2.push('*');
+
             console.log(exOne);
             console.log(pO1)
             console.log(eq2);
@@ -509,6 +611,9 @@ function touchO() {
 
 
         else if (o2.length >= 1) {
+            dEx.splice(0, dEx.length);
+
+            dEx.push(a1);
             pO1.push('*');
 
             console.log(o2);
@@ -519,15 +624,22 @@ function touchO() {
 
     document.getElementById("calcKeyDivide").addEventListener("click", function () {
         if (a1.length >= 1 && pO1.length < 1) {
+            dEx.splice(0, dEx.length);
+
+            dEx.push('/');
             pO1.push('/');
+            
             console.log(o1);
             showMe();
 
         }
         else if (b1.length >= 1) {
+            dEx.splice(0, dEx.length);
             o1.splice(0, o1.length, ...pO1);
 
+            dEx.push(a2);
             o2.push('/');
+            
             console.log(exOne);
             console.log(a2);
             console.log(o2);
@@ -539,7 +651,11 @@ function touchO() {
         }
 
         else if (a2.length >=1 && o2.length < 1) {
+            dEx.splice(0, dEx.length);
+
+            dEx.push('/');
             o2.push('/');
+            
             console.log(exOne);
             console.log(pO1)
             console.log(eq2);
@@ -550,7 +666,11 @@ function touchO() {
 
 
         else if (o2.length >= 1) {
+            dEx.splice(0, dEx.length);
+
+            dEx.push(a1);
             pO1.push('/');
+            
             console.log(o2);
             console.log(o1);
             showMe();
