@@ -1,12 +1,16 @@
 
 .container {
     display: flex; 
+    flex-grow: 0;
     flex-direction: column;
     border-style: solid;
+  
     border-color: aqua;
-    width: 20%;
+    width: 10%;
     height: 25%;
     background-color: aqua;
+    position: static;
+    min-width: fit-content;
 
 }
 .display { display: flex;
@@ -15,6 +19,7 @@
     background-color: black;
     color: chartreuse;
     font-size: large;
+    font-family:'Courier New', Courier, monospace;
     
    
 
@@ -25,7 +30,7 @@
    border-style: solid;
    border-color: aqua;  
    padding: auto;
-   width: 1fr;
+   width: auto;
 }
 
    
@@ -46,7 +51,8 @@
     display: flex;
     background-color: darkgray;
     border-style: solid;
-    border-color: aqua;   
+    border-width: thin;
+    border-color: black;   
    align-items: center;
 }
 

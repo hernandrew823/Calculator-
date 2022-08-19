@@ -642,7 +642,7 @@ function operator() {
                 console.log(a2);
                 console.log(pO1);
                 console.log(eq2);
-
+                
                 document.getElementById('screen').innerHTML = exOne;
 
             }
@@ -669,7 +669,7 @@ function operator() {
                 console.log(exOne);
                 console.log(pO1);
                 console.log(eq2);
-
+                
 
                 document.getElementById('screen').innerHTML = exTwo;
 
@@ -693,7 +693,7 @@ function operator() {
                 console.log(o1);
                 console.log(o2);
                 console.log(a2)
-
+                
                 document.getElementById('screen').innerHTML = exOne;
 
             }
@@ -717,7 +717,7 @@ function operator() {
                 console.log(o2);
                 console.log(o1);
                 console.log(a1)
-
+                
                 document.getElementById('screen').innerHTML = exTwo;
             }
             else if (b1.length >= 1 && o1 == "*" || b1.length >= 1 && o1 == "*" && eq1.length >= 1) {
@@ -738,7 +738,7 @@ function operator() {
                 console.log(o1);
                 console.log(o2);
                 console.log(a2)
-
+                
                 document.getElementById('screen').innerHTML = exOne;
 
             }
@@ -762,7 +762,8 @@ function operator() {
                 console.log(b2);
                 console.log(o2);
                 console.log(o1);
-                console.log(a1)
+                console.log(a1);
+                
 
                 document.getElementById('screen').innerHTML = exTwo;
             }
@@ -784,8 +785,8 @@ function operator() {
                 console.log(b1);
                 console.log(o1);
                 console.log(o2);
-                console.log(a2)
-
+                console.log(a2);
+                
                 document.getElementById('screen').innerHTML = exOne;
 
             }
@@ -811,7 +812,7 @@ function operator() {
                 console.log(o2);
                 console.log(o1);
                 console.log(a1)
-
+                
                 document.getElementById('screen').innerHTML = exTwo;
             }
             
