@@ -11,6 +11,7 @@ var cl = [];
 var pO1 = [];
 var eq1 = [];
 var eq2 = [];
+var placeHolder = ['0'];
 
 
 
@@ -45,9 +46,9 @@ function showMe() {
     else if (a2.length >= 1 && o2.length >= 1) {
         document.getElementById('screen').innerHTML = b2.join('');
     }
-    else if (cl.length >= 1) {
-        document.getElementById('screen').innerHTML = ('0');
-    }
+    else if (a1.length < 1 && a2.length < 1 && b1.length < 1 && b2.length < 1 ) 
+    { document.getElementById('screen').innerHTML = placeHolder;}
+    
 
 }
 
@@ -150,6 +151,7 @@ function touchA() {
     })
 
     document.getElementById("calcKeyClear").addEventListener("click", function () {
+        document.getElementById('screen').innerHTML = '0';
 
         cl.push('cl');
         exOne.splice(0, exOne.length);
@@ -350,6 +352,8 @@ function touchB() {
 
 
     document.getElementById("calcKeyClear").addEventListener(" click", function () {
+        document.getElementById('screen').innerHTML = '0';
+
 
         cl.push("cl");
         exOne.splice(0, exOne.length);
@@ -572,7 +576,9 @@ function touchO() {
     })
 
     document.getElementById("calcKeyClear").addEventListener(" click", function () {
-        if (a1.length > 0 || a2.length > 0 || b1.length > 0 || b2.length > 0 || exOne.length > 0 || exTwo.length > 0 || o1.length > 0 || o2.length > 0) {
+         
+            document.getElementById('screen').innerHTML = '0';
+
             cl.push("cl");
             exOne.splice(0, exOne.length);
             a2.splice(0, a2.length);
@@ -593,7 +599,7 @@ function touchO() {
             console.log(o2);
             console.log(a2);
             showMe();
-        }
+        
     })
 
 }
@@ -615,7 +621,7 @@ function operator() {
 
 
             if (b1.length >= 1 && o1 == "+" || b1.length >= 1 && o1 == "+" && eq1.length >= 1) {
-                a1.push(a1.join(''));
+                a1.splice(0, a1.length, (a1.join('')));
                 console.log(a1);
                 b1.splice(0, b1.length, (b1.join('')));
                 console.log(b1);
