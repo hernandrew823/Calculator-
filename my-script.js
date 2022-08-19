@@ -13,48 +13,54 @@ var eq1 = [];
 var eq2 = [];
 var placeHolder = ['0'];
 var dEx = [];
+var dEx2 = [];
 
 
 //display 
 
 function showMe() {
-
-    document.getElementById('screen').innerHTML = '0';
-
-    if (pO1.length < 1 && a2.length < 1) {
-        document.getElementById('screen').innerHTML = a1.join('');
-
+    if (a1.length < 1 && a2.length < 1) {
+        document.getElementById('screen').innerHTML = 0;
     }
-    else if (a1.length >= 1 && b1.length < 1 && o1.length <= 1) {
-        document.getElementById('screen').innerHTML = pO1;
-    }
-    else if (a1.length >= 1 && b1.length < 1 && o1.length > 1) {
-        document.getElementById('screen').innerHTML = o1;
+    else
+    document.getElementById('screen').innerHTML = dEx.join('');
+    console.log(dEx);
 
+    //if (o2.length >=1) {
+     //   document.getElementById('screen').innerHTML = (dEx[1].join(''));
 
-    }
-
-    else if (a2.length >= 1 && b2.length < 1) {
-        document.getElementById('screen').innerHTML = o2;
-
-    }
-
-    else if (pO1.length >= 1) {
-        document.getElementById('screen').innerHTML = b1.join('');
-    }
-
-    else if (a2.length >= 1 && o2.length >= 1) {
-        document.getElementById('screen').innerHTML = b2.join('');
-    }
-    else if (o1 == "/" && b1 == 0 || o2 == "/" && b2 == 0) {
-        document.getElementById('screen').innerHTML = "Nope";
-
-    }
+   // }
     
 
 }
 
+//if (pO1.length < 1 && a2.length < 1) {
+  //  document.getElementById('screen').innerHTML = a1.join('');
 
+//}
+//else if (a1.length >= 1 && b1.length < 1 && o1.length <= 1) {
+  //  document.getElementById('screen').innerHTML = pO1;
+//}
+//else if (a1.length >= 1 && b1.length < 1 && o1.length > 1) {
+  //  document.getElementById('screen').innerHTML = o1;
+
+
+//}
+
+//else if (a2.length >= 1 && b2.length < 1) {
+  //  document.getElementById('screen').innerHTML = o2;
+
+//}
+
+//else if (pO1.length >= 1) {
+  //  document.getElementById('screen').innerHTML = b1.join('');
+//}
+
+//else if (a2.length >= 1 && o2.length >= 1) {
+  //  document.getElementById('screen').innerHTML = b2.join('');
+//}
+//else if (o1 == "/" && b1 == 0 || o2 == "/" && b2 == 0) {
+//    document.getElementById('screen').innerHTML = "Nope";
 
 
 // should i combine the three touch functions into one function? 
@@ -186,7 +192,7 @@ function touchA() {
         exTwo.splice(0, exTwo.length);
         eq2.splice(0, eq2.length);
         eq1.splice(0, eq1.length);
-        dEx.push(0);
+        dEx.length = 0;
 
 
         console.log(a1);
@@ -415,7 +421,7 @@ function touchB() {
 
 
     document.getElementById("calcKeyClear").addEventListener(" click", function () {
-        document.getElementById('screen').innerHTML = '0';
+       
 
 
         cl.push("cl");
@@ -429,6 +435,7 @@ function touchB() {
         exTwo.splice(0, exTwo.length);
         eq1.splice(0, eq1.length);
         eq2.splice(0, eq2.length);
+        dEx.length = 0; 
 
         console.log(a1);
         console.log(exOne)
@@ -460,8 +467,9 @@ function touchO() {
             
             console.log(o1);
             console.log(pO1);
-            console.log(a1)
-            console.log(b1)
+            console.log(a1);
+            console.log(b1);
+            console.log(dEx);
             showMe();
 
         }
@@ -477,6 +485,7 @@ function touchO() {
             console.log(eq2);
             console.log(a2);
             console.log(o2);
+            console.log(dEx);
             showMe();
 
 
@@ -495,6 +504,7 @@ function touchO() {
             console.log(eq2);
             console.log(a2);
             console.log(o2);
+            console.log(dEx);
             showMe();
         }
 
@@ -506,6 +516,7 @@ function touchO() {
             
             console.log(o2);
             console.log(o1);
+            console.log(dEx);
             showMe();
 
         }
@@ -534,6 +545,7 @@ function touchO() {
             console.log(exOne);
             console.log(a2);
             console.log(o2);
+            console.log(dEx);
             showMe();
 
 
@@ -551,6 +563,7 @@ function touchO() {
             console.log(eq2);
             console.log(a2);
             console.log(o2);
+            console.log(dEx);
             showMe();
         }
 
@@ -563,6 +576,7 @@ function touchO() {
             
             console.log(o2);
             console.log(o1);
+            console.log(dEx);
             showMe();
         }
     })
@@ -575,6 +589,7 @@ function touchO() {
             pO1.push('*');
            
             console.log(o1);
+            console.log(dEx);
             showMe();
 
         }
@@ -588,6 +603,7 @@ function touchO() {
             console.log(exOne);
             console.log(a2);
             console.log(o2);
+            console.log(dEx);
             showMe();
 
 
@@ -606,6 +622,7 @@ function touchO() {
             console.log(eq2);
             console.log(a2);
             console.log(o2);
+            console.log(dEx);
             showMe();
         }
 
@@ -618,6 +635,7 @@ function touchO() {
 
             console.log(o2);
             console.log(o1);
+            console.log(dEx);
             showMe();
         }
     })
@@ -630,6 +648,7 @@ function touchO() {
             pO1.push('/');
             
             console.log(o1);
+            console.log(dEx);
             showMe();
 
         }
@@ -643,6 +662,7 @@ function touchO() {
             console.log(exOne);
             console.log(a2);
             console.log(o2);
+            console.log(dEx);
             showMe();
 
 
@@ -661,6 +681,7 @@ function touchO() {
             console.log(eq2);
             console.log(a2);
             console.log(o2);
+            console.log(dEx);
             showMe();
         }
 
@@ -673,6 +694,7 @@ function touchO() {
             
             console.log(o2);
             console.log(o1);
+            console.log(dEx);
             showMe();
 
         }
@@ -688,11 +710,14 @@ function touchO() {
             console.log(pO1);
             console.log(a1);
             console.log(b1);
+            console.log(dEx);
             showMe();
         }
 
         else if (b2.length >= 1) {
             eq2.push('=');
+            
+            console.log(dEx);
             showMe();
         }
     })
@@ -720,6 +745,7 @@ function touchO() {
             console.log(o1);
             console.log(o2);
             console.log(a2);
+            console.log(dEx);
             showMe();
         
     })
@@ -754,6 +780,8 @@ function operator() {
                 b1.splice(0, b1.length);
                 pO1.splice(0, pO1.length);
                 exTwo.splice(0, exTwo.length);
+                
+                showMe();
                 console.log(a1);
                 console.log(exOne)
                 console.log(b1);
@@ -762,8 +790,10 @@ function operator() {
                 console.log(a2);
                 console.log(pO1);
                 console.log(eq2);
+                console.log(dEx);
+
                 
-                document.getElementById('screen').innerHTML = exOne;
+                
 
             }
 
@@ -780,6 +810,8 @@ function operator() {
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);
                 eq2.splice(0, eq2.length);
+                
+                showMe();
                 console.log(a1);
                 console.log(exTwo);
                 console.log(a2);
@@ -789,9 +821,10 @@ function operator() {
                 console.log(exOne);
                 console.log(pO1);
                 console.log(eq2);
+                console.log(dEx);
+
                 
 
-                document.getElementById('screen').innerHTML = exTwo;
 
             }
 
@@ -807,6 +840,9 @@ function operator() {
                 o1.splice(0, o1.length);
                 b1.splice(0, b1.length);
                 pO1.splice(0, pO1.length);
+                
+                showMe();
+
                 console.log(a1);
                 console.log(exOne)
                 console.log(b1);
@@ -814,7 +850,6 @@ function operator() {
                 console.log(o2);
                 console.log(a2)
                 
-                document.getElementById('screen').innerHTML = exOne;
 
             }
 
@@ -831,6 +866,9 @@ function operator() {
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);
                 eq2.splice(0, eq2.length);
+                
+                showMe();
+
                 console.log(a2);
                 console.log(exTwo)
                 console.log(b2);
@@ -838,7 +876,6 @@ function operator() {
                 console.log(o1);
                 console.log(a1)
                 
-                document.getElementById('screen').innerHTML = exTwo;
             }
             else if (b1.length >= 1 && o1 == "*" || b1.length >= 1 && o1 == "*" && eq1.length >= 1) {
                 a1.splice(0, a1.length, (a1.join('')));
@@ -852,6 +889,9 @@ function operator() {
                 o1.splice(0, o1.length);
                 b1.splice(0, b1.length);
                 pO1.splice(0, pO1.length);
+                
+                showMe();
+
                 console.log(a1);
                 console.log(exOne)
                 console.log(b1);
@@ -859,7 +899,6 @@ function operator() {
                 console.log(o2);
                 console.log(a2)
                 
-                document.getElementById('screen').innerHTML = exOne;
 
             }
 
@@ -877,6 +916,9 @@ function operator() {
                 b2.splice(0, b2.length);
                 eq2.splice(0, eq2.length);
 
+                
+                showMe();
+
                 console.log(a2);
                 console.log(exTwo)
                 console.log(b2);
@@ -885,7 +927,6 @@ function operator() {
                 console.log(a1);
                 
 
-                document.getElementById('screen').innerHTML = exTwo;
             }
 
             else if (b1.length >= 1 && o1 == "/" || b1.length >= 1 && o1 == "/" && eq1.length >= 1) {
@@ -900,6 +941,10 @@ function operator() {
                 o1.splice(0, o1.length);
                 b1.splice(0, b1.length);
                 pO1.splice(0, pO1.length);
+                
+                showMe();
+
+                
                 console.log(a1);
                 console.log(exOne)
                 console.log(b1);
@@ -907,7 +952,6 @@ function operator() {
                 console.log(o2);
                 console.log(a2);
                 
-                document.getElementById('screen').innerHTML = exOne;
 
             }
 
@@ -925,6 +969,9 @@ function operator() {
                 b2.splice(0, b2.length);
                 eq2.splice(0, eq2.length);
 
+                
+                showMe();
+
                 console.log(pO1);
                 console.log(a2);
                 console.log(exTwo)
@@ -933,7 +980,6 @@ function operator() {
                 console.log(o1);
                 console.log(a1)
                 
-                document.getElementById('screen').innerHTML = exTwo;
             }
             
 
