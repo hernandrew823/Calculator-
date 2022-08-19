@@ -46,8 +46,10 @@ function showMe() {
     else if (a2.length >= 1 && o2.length >= 1) {
         document.getElementById('screen').innerHTML = b2.join('');
     }
-    else if (a1.length < 1 && a2.length < 1 && b1.length < 1 && b2.length < 1 ) 
-    { document.getElementById('screen').innerHTML = placeHolder;}
+    else if (o1 == "/" && b1 == 0 || o2 == "/" && b2 == 0) {
+        document.getElementById('screen').innerHTML = "Nope";
+
+    }
     
 
 }
@@ -151,7 +153,7 @@ function touchA() {
     })
 
     document.getElementById("calcKeyClear").addEventListener("click", function () {
-        document.getElementById('screen').innerHTML = '0';
+        
 
         cl.push('cl');
         exOne.splice(0, exOne.length);
@@ -173,7 +175,7 @@ function touchA() {
         console.log(o2);
         console.log(a2);
         console.log(cl);
-        showMe();
+        showMe(0);
     })
 }
 
@@ -812,6 +814,7 @@ function operator() {
 
                 document.getElementById('screen').innerHTML = exTwo;
             }
+            
 
         })
     })
