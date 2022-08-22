@@ -24,32 +24,34 @@ function showMe() {
         document.getElementById('screen').innerHTML = '0';
     }
 
-    else if (a1.length >= 1  || a2.length >= 1 && o2.length !== 1 || b1.length >=1 )       //order code is LAID OUT is ORDER CODE FOLLOWS
+    else if (a1.length >= 1 && b1.length < 1  || a2.length >= 1 && o2.length !== 1 )       //order code is LAID OUT is ORDER CODE FOLLOWS // add "&& b1.length" to get the code which shows b1, to work
                                                                                         // had trouble displaying expressiosn because calc displayed empty b1 before the relevant expression 
     {document.getElementById('screen').innerHTML = dEx.join(''); ///// alternate between "dEx" and "dEx.splice(0, 1)" is the splicekeeping display consistently show one variable at a time?
     console.log(dEx);                                                  /// splice is causing dEx to clean itself?
 console.log}
 
-else if (exOne.length >= 1 && b2.length < 1) {              ///////////////////////
-    document.getElementById('screen').innerHTML = dEx.splice(0, 1);
-
-}
-else if (exTwo.length >= 1 && o2.length <= 1 && b1.length < 1) {    //////////
+else if (exOne.length >= 1 && b2.length < 1) {              /////////////////////// shows operator o2.....shows o2
     document.getElementById('screen').innerHTML = dEx;
-
 }
+//else if (exTwo.length >= 1 && o1.length < 1 && b1.length < 1) {    ////////// shows operator po1 o1 <-------not doing anything? pO1 still shows
+   //// document.getElementById('screen').innerHTML = dEx;
 
-    else if (a2.length >= 1 && o2.length >= 1 && exTwo.length < 1){
-        dEx.length = 0;
-        document.getElementById('screen').innerHTML = b2.join('');
-        console.log
+//}
 
-    }
+   
 
-    else if (a1.length >= 1 && pO1.length >= 1 && o1.length <= 1) {     
-        document.getElementById('screen').innerHTML = b1.join('');
+    else if (a1.length >= 1 && pO1.length == 1 && o1.length <= 1) {     ///show b1.....not showing b1
+        document.getElementById('screen').innerHTML = dEx2.join('');
         console.log()
 }
+
+else if (a2.length >= 1 && o2.length >= 1 && exTwo.length < 1){         //show b2...is showing b2
+    document.getElementById('screen').innerHTML = dEx2.join('');
+    console.log
+
+}
+
+
 
 
     //if (o2.length >=1) {
@@ -217,6 +219,8 @@ function touchA() {
         eq2.length = 0;
         eq1.length = 0;
         dEx.length = 0;
+        dEx2.length = 0;
+        pO1.length = 0; 
 
 
         console.log(a1);
@@ -245,7 +249,7 @@ function touchB() {
         document.getElementById("calcKey1").addEventListener("click", function () {
             if (pO1.length >= 1) {
                 b1.push(1);
-                dEx.push(1);
+                dEx2.push(1);
                 
                 console.log(b1);
                 showMe();
@@ -254,7 +258,7 @@ function touchB() {
 
             else if (a2.length >= 1) {
                 b2.push(1);
-                dEx.push(1).join;
+                dEx2.push(1).join;
 
                 console.log(b2);
                 showMe();
@@ -264,7 +268,7 @@ function touchB() {
         document.getElementById("calcKey2").addEventListener("click", function () {
             if (pO1.length >= 1) {
                 b1.push(2);
-                dEx.push(2);
+                dEx2.push(2);
                 
                 console.log(b1);
                 showMe();
@@ -273,7 +277,7 @@ function touchB() {
             }
             else if (a2.length >= 1) {
                 b2.push(2);
-                dEx.push(2);
+                dEx2.push(2);
                
                 console.log(b2);
                 showMe();
@@ -283,7 +287,7 @@ function touchB() {
         document.getElementById("calcKey3").addEventListener("click", function () {
             if (pO1.length >= 1) {
                 b1.push(3);
-                dEx.push(3);
+                dEx2.push(3);
                 
                 console.log(b1);
                 showMe();
@@ -292,7 +296,7 @@ function touchB() {
             }
             else if (a2.length >= 1) {
                 b2.push(3);
-                dEx.push(3);
+                dEx2.push(3);
                 
                 console.log(b2);
                 showMe();
@@ -303,7 +307,7 @@ function touchB() {
     document.getElementById("calcKey4").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(4);
-            dEx.push(4);
+            dEx2.push(4);
             
             console.log(b1);
             showMe();
@@ -311,7 +315,7 @@ function touchB() {
 
         } else if (a2.length >= 1) {
             b2.push(4);
-            dEx.push(4);
+            dEx2.push(4);
             
             console.log(o2);
             console.log(b2);
@@ -325,7 +329,7 @@ function touchB() {
     document.getElementById("calcKey5").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(5);
-            dEx.push(5);
+            dEx2.push(5);
             
             console.log(b1);
             showMe();
@@ -333,7 +337,7 @@ function touchB() {
 
         else if (a2.length >= 1) {
             b2.push(5);
-            dEx.push(5);
+            dEx2.push(5);
             
             console.log(b2);
             showMe();
@@ -343,7 +347,7 @@ function touchB() {
     document.getElementById("calcKey6").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(6);
-            dEx.push(6);
+            dEx2.push(6);
             
             console.log(b1);
             showMe();
@@ -351,7 +355,7 @@ function touchB() {
 
         else if (a2.length >= 1) {
             b2.push(6);
-            dEx.push(6);
+            dEx2.push(6);
             
             console.log(b2);
             showMe();
@@ -361,14 +365,14 @@ function touchB() {
     document.getElementById("calcKey7").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(7);
-            dEx.push(7);
+            dEx2.push(7);
             
             console.log(b1);
             showMe();
         }
         else if (a2.length >= 1) {
             b2.push(7);
-            dEx.push(7);
+            dEx2.push(7);
             
             console.log(b2);
             showMe();
@@ -378,7 +382,7 @@ function touchB() {
     document.getElementById("calcKey8").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(8);
-            dEx.push(8);
+            dEx2.push(8);
             
             console.log(b1);
             showMe();
@@ -387,7 +391,7 @@ function touchB() {
 
         else if (a2.length >= 1) {
             b2.push(8);
-            dEx.push(8);
+            dEx2.push(8);
             
             console.log(b2);
             console.log(a1);
@@ -399,7 +403,7 @@ function touchB() {
     document.getElementById("calcKey9").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(9);
-            dEx.push(9);
+            dEx2.push(9);
             
             console.log(b1);
             showMe();
@@ -407,7 +411,7 @@ function touchB() {
 
         else if (a2.length >= 1) {
             b2.push(9);
-            dEx.push(9);
+            dEx2.push(9);
             
             console.log(b2);
             showMe();
@@ -417,7 +421,7 @@ function touchB() {
     document.getElementById("calcKey0").addEventListener("click", function () {
         if (pO1.length >= 1) {
             b1.push(0);
-            dEx.push(0);
+            dEx2.push(0);
             
             console.log(b1);
             showMe();
@@ -425,7 +429,7 @@ function touchB() {
 
         else if (a2.length >= 1) {
             b2.push(0);
-            dEx.push(0);
+            dEx2.push(0);
             
             console.log(b2);
             showMe();
@@ -460,6 +464,9 @@ function touchB() {
         eq2.length = 0;
         eq1.length = 0;
         dEx.length = 0;
+        dEx2.length = 0;
+        pO1.length = 0; 
+
 
 
         console.log(a1);
@@ -750,7 +757,7 @@ function touchO() {
     document.getElementById("calcKeyClear").addEventListener(" click", function () {
          
 
-            exOne.length =0;
+        exOne.length = 0;
         a2.length = 0;
         a1.length = 0;
         o1.length = 0;
@@ -761,6 +768,9 @@ function touchO() {
         eq2.length = 0;
         eq1.length = 0;
         dEx.length = 0;
+        dEx2.length = 0;
+        pO1.length = 0; 
+
 
 
         console.log(a1);
@@ -800,12 +810,14 @@ function operator() {
                 exOne.splice(0, exOne.length, ((parseInt(a1, 10)) + (parseInt(b1, 10))));
                 a2.splice(0, a2.length, ...exOne);
                 dEx.splice(0,dEx.length, ...exOne);
+                
                 a1.splice(0, a1.length);
                 o1.splice(0, o1.length);
                 b1.splice(0, b1.length);
                 pO1.splice(0, pO1.length);
                 exTwo.splice(0, exTwo.length);
-                
+                dEx2.splice(0, dEx2.length);
+
                 showMe();
                 console.log(a1);
                 console.log(exOne)
@@ -837,6 +849,7 @@ function operator() {
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);
                 eq2.splice(0, eq2.length);
+                dEx2.splice(0, dEx2.length);
                 
                 showMe();
                 console.log(a1);
@@ -868,6 +881,7 @@ function operator() {
                 o1.splice(0, o1.length);
                 b1.splice(0, b1.length);
                 pO1.splice(0, pO1.length);
+                dEx2.splice(0, dEx2.length);
                 
                 showMe();
 
@@ -896,6 +910,7 @@ function operator() {
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);
                 eq2.splice(0, eq2.length);
+                dEx2.splice(0, dEx2.length);
                 
                 showMe();
 
@@ -920,6 +935,7 @@ function operator() {
                 o1.splice(0, o1.length);
                 b1.splice(0, b1.length);
                 pO1.splice(0, pO1.length);
+                dEx2.splice(0, dEx2.length);
                 
                 showMe();
 
@@ -948,6 +964,7 @@ function operator() {
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);
                 eq2.splice(0, eq2.length);
+                dEx2.splice(0, dEx2.length);
 
                 
                 showMe();
@@ -962,7 +979,7 @@ function operator() {
 
             }
 
-            else if (b1.length >= 1 && o1 == "/" || b1.length >= 1 && o1 == "/" && eq1.length >= 1) {
+            else if (b1.length >= 1 && o1 == "/" && b1 !== 0 || b1.length >= 1 && o1 == "/" && eq1.length >= 1 && b1 !== 0) {
                 a1.splice(0, a1.length, (a1.join('')));
                 console.log(a1);
                 b1.splice(0, b1.length, (b1.join('')));
@@ -975,6 +992,7 @@ function operator() {
                 o1.splice(0, o1.length);
                 b1.splice(0, b1.length);
                 pO1.splice(0, pO1.length);
+                dEx2.splice(0, dEx2.length);
                 
                 showMe();
 
@@ -989,7 +1007,7 @@ function operator() {
 
             }
 
-            else if (b2.length >= 1 && o2 == "/" || b2.length >= 1 && eq2.length >= 1 && o2 == "/") {
+            else if (b2.length >= 1 && o2 == "/" && b2 !== 0 || b2.length >= 1 && eq2.length >= 1 && o2 == "/" && b2 !== 0) {
 
                 a2.splice(0, a1.length, (a2.join('')));
                 console.log(a2);
@@ -1004,6 +1022,7 @@ function operator() {
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);
                 eq2.splice(0, eq2.length);
+                dEx2.splice(0, dEx2.length);
 
                 
                 showMe();
@@ -1017,6 +1036,15 @@ function operator() {
                 console.log(a1)
                 
             }
+            else if (b2.length >= 1 && o2 == "/" && b2 == 0 || b2.length >= 1 && eq2.length >= 1 && o2 == "/" && b2 == 0 || b1.length >= 1 && o1 == "/" && b1 !== 0 || b1.length >= 1 && o1 == "/" && eq1.length >= 1 && b1 !== 0) {
+                exTwo.splice(0, exTwo.length, ' division by zero ...D:');
+                a1.splice(0, a1.length, ...exTwo);
+                exOne.splice(0, exTwo.length, ' division by zero ...D:');
+                a2.splice(0, a1.length, ...exOne);
+    
+                 
+
+             }
             
 
         })
