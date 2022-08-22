@@ -16,22 +16,46 @@ var dEx = [];
 var dEx2 = [];
 
 
+
 //display 
 
 function showMe() {
     if (a1.length < 1 && a2.length < 1) {
-        document.getElementById('screen').innerHTML = 0;
+        document.getElementById('screen').innerHTML = '0';
     }
-    else
-    document.getElementById('screen').innerHTML = dEx.join('');
-    console.log(dEx);
+
+    else if (a1.length >= 1  || a2.length >= 1 && o2.length !== 1 || b1.length >=1 )       //order code is LAID OUT is ORDER CODE FOLLOWS
+                                                                                        // had trouble displaying expressiosn because calc displayed empty b1 before the relevant expression 
+    {document.getElementById('screen').innerHTML = dEx.join(''); ///// alternate between "dEx" and "dEx.splice(0, 1)" is the splicekeeping display consistently show one variable at a time?
+    console.log(dEx);                                                  /// splice is causing dEx to clean itself?
+console.log}
+
+else if (exOne.length >= 1 && b2.length < 1) {              ///////////////////////
+    document.getElementById('screen').innerHTML = dEx.splice(0, 1);
+
+}
+else if (exTwo.length >= 1 && o2.length <= 1 && b1.length < 1) {    //////////
+    document.getElementById('screen').innerHTML = dEx;
+
+}
+
+    else if (a2.length >= 1 && o2.length >= 1 && exTwo.length < 1){
+        dEx.length = 0;
+        document.getElementById('screen').innerHTML = b2.join('');
+        console.log
+
+    }
+
+    else if (a1.length >= 1 && pO1.length >= 1 && o1.length <= 1) {     
+        document.getElementById('screen').innerHTML = b1.join('');
+        console.log()
+}
+
 
     //if (o2.length >=1) {
      //   document.getElementById('screen').innerHTML = (dEx[1].join(''));
 
    // }
-    
-
 }
 
 //if (pO1.length < 1 && a2.length < 1) {
@@ -181,17 +205,17 @@ function touchA() {
     document.getElementById("calcKeyClear").addEventListener("click", function () {
         
 
-        cl.push('cl');
-        exOne.splice(0, exOne.length);
-        a2.splice(0, a2.length);
-        a1.splice(0, a1.length);
-        o1.splice(0, o1.length);
-        o2.splice(0, o2.length);
-        b1.splice(0, b1.length);
-        b2.splice(0, o2.length);
-        exTwo.splice(0, exTwo.length);
-        eq2.splice(0, eq2.length);
-        eq1.splice(0, eq1.length);
+        
+        exOne.length =0;
+        a2.length = 0;
+        a1.length = 0;
+        o1.length = 0;
+        o2.length = 0;
+        b1.length = 0;
+        b2.length = 0;
+        exTwo.length = 0;
+        eq2.length = 0;
+        eq1.length = 0;
         dEx.length = 0;
 
 
@@ -215,6 +239,7 @@ function touchA() {
 //   }
 //} )
 function touchB() {
+    
     {
 
         document.getElementById("calcKey1").addEventListener("click", function () {
@@ -229,7 +254,7 @@ function touchB() {
 
             else if (a2.length >= 1) {
                 b2.push(1);
-                dEx.push(1);
+                dEx.push(1).join;
 
                 console.log(b2);
                 showMe();
@@ -424,18 +449,18 @@ function touchB() {
        
 
 
-        cl.push("cl");
-        exOne.splice(0, exOne.length);
-        a2.splice(0, a2.length);
-        a1.splice(0, a1.length);
-        o1.splice(0, o1.length);
-        o2.splice(0, o2.length);
-        b1.splice(0, b1.length);
-        b2.splice(0, o2.length);
-        exTwo.splice(0, exTwo.length);
-        eq1.splice(0, eq1.length);
-        eq2.splice(0, eq2.length);
-        dEx.length = 0; 
+        exOne.length =0;
+        a2.length = 0;
+        a1.length = 0;
+        o1.length = 0;
+        o2.length = 0;
+        b1.length = 0;
+        b2.length = 0;
+        exTwo.length = 0;
+        eq2.length = 0;
+        eq1.length = 0;
+        dEx.length = 0;
+
 
         console.log(a1);
         console.log(exOne)
@@ -443,7 +468,7 @@ function touchB() {
         console.log(o1);
         console.log(o2);
         console.log(a2);
-        showMe()
+        console.log(cl)
     })
 }
 
@@ -494,9 +519,9 @@ function touchO() {
         }
 
         else if (a2.length >=1 && o2.length < 1) {
-            dEx.splice(0, dEx.length);
+            dEx.splice(0, dEx.length, ...'+');
             
-            dEx.push('+');
+            
             o2.push('+');
             
             console.log(exOne);
@@ -553,9 +578,9 @@ function touchO() {
         }
 
         else if (a2.length >=1 && o2.length < 1) {
-            dEx.splice(0, dEx.length);
+            dEx.splice(0, dEx.length, ...'-');
             
-            dEx.push('-')
+            
             o2.push('-');
             
             console.log(exOne);
@@ -612,9 +637,9 @@ function touchO() {
         }
 
         else if (a2.length >=1 && o2.length < 1) {
-            dEx.splice(0, dEx.length);
+            dEx.splice(0, dEx.length, ...'*');
             
-            dEx.push('*');
+            
             o2.push('*');
 
             console.log(exOne);
@@ -671,9 +696,9 @@ function touchO() {
         }
 
         else if (a2.length >=1 && o2.length < 1) {
-            dEx.splice(0, dEx.length);
+            dEx.splice(0, dEx.length, ...'/');
 
-            dEx.push('/');
+            
             o2.push('/');
             
             console.log(exOne);
@@ -724,28 +749,27 @@ function touchO() {
 
     document.getElementById("calcKeyClear").addEventListener(" click", function () {
          
-            document.getElementById('screen').innerHTML = '0';
 
-            cl.push("cl");
-            exOne.splice(0, exOne.length);
-            a2.splice(0, a2.length);
-            a1.splice(0, a1.length);
-            o1.splice(0, o1.length);
-            o2.splice(0, o2.length);
-            pO1.splice(0, pO1.length);
-            b1.splice(0, b1.length);
-            b2.splice(0, o2.length);
-            eq1.splice(0, eq1.length);
+            exOne.length =0;
+        a2.length = 0;
+        a1.length = 0;
+        o1.length = 0;
+        o2.length = 0;
+        b1.length = 0;
+        b2.length = 0;
+        exTwo.length = 0;
+        eq2.length = 0;
+        eq1.length = 0;
+        dEx.length = 0;
 
-            eq2.splice(0, eq2.length);
-            exTwo.splice(0, exTwo.length);
-            console.log(a1);
-            console.log(exOne)
-            console.log(b1);
-            console.log(o1);
-            console.log(o2);
-            console.log(a2);
-            console.log(dEx);
+
+        console.log(a1);
+        console.log(exOne)
+        console.log(b1);
+        console.log(o1);
+        console.log(o2);
+        console.log(a2);
+        console.log(cl)
             showMe();
         
     })
@@ -775,6 +799,7 @@ function operator() {
                 console.log(b1);
                 exOne.splice(0, exOne.length, ((parseInt(a1, 10)) + (parseInt(b1, 10))));
                 a2.splice(0, a2.length, ...exOne);
+                dEx.splice(0,dEx.length, ...exOne);
                 a1.splice(0, a1.length);
                 o1.splice(0, o1.length);
                 b1.splice(0, b1.length);
@@ -806,6 +831,8 @@ function operator() {
                 exTwo.splice(0, exTwo.length, ((parseInt(a2, 10)) + (parseInt(b2, 10))));
                 a1.splice(0, a1.length, ...exTwo);
                 exOne.splice(0, exOne.length);
+                dEx.splice(0,dEx.length, ...exTwo);
+                
                 a2.splice(0, a2.length);
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);
@@ -835,6 +862,7 @@ function operator() {
                 console.log(b1);
                 exOne.splice(0, exOne.length, ((parseInt(a1, 10)) - (parseInt(b1, 10))));
                 a2.splice(0, a2.length, ...exOne);
+                dEx.splice(0,dEx.length, ...exOne);
                 exTwo.splice(0, exTwo.length);
                 a1.splice(0, a1.length);
                 o1.splice(0, o1.length);
@@ -862,6 +890,8 @@ function operator() {
                 exTwo.splice(0, exTwo.length, ((parseInt(a2, 10)) - (parseInt(b2, 10))));
                 a1.splice(0, a1.length, ...exTwo);
                 exOne.splice(0, exOne.length);
+                dEx.splice(0,dEx.length, ...exTwo);
+
                 a2.splice(0, a2.length);
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);
@@ -884,6 +914,7 @@ function operator() {
                 console.log(b1);
                 exOne.splice(0, exOne.length, ((parseInt(a1, 10)) * (parseInt(b1, 10))));
                 a2.splice(0, a2.length, ...exOne);
+                dEx.splice(0,dEx.length, ...exOne);
                 exTwo.splice(0, exTwo.length);
                 a1.splice(0, a1.length);
                 o1.splice(0, o1.length);
@@ -910,6 +941,8 @@ function operator() {
                 console.log(b2);
                 exTwo.splice(0, exTwo.length, ((parseInt(a2, 10)) * (parseInt(b2, 10))));
                 a1.splice(0, a1.length, ...exTwo);
+                dEx.splice(0,dEx.length, ...exTwo);
+
                 exOne.splice(0, exOne.length);
                 a2.splice(0, a2.length);
                 o2.splice(0, o2.length);
@@ -936,6 +969,7 @@ function operator() {
                 console.log(b1);
                 exOne.splice(0, exOne.length, ((parseInt(a1, 10)) / (parseInt(b1, 10))));
                 a2.splice(0, a2.length, ...exOne);
+                dEx.splice(0,dEx.length, ...exOne);
                 exTwo.splice(0, exTwo.length);
                 a1.splice(0, a1.length);
                 o1.splice(0, o1.length);
@@ -964,6 +998,8 @@ function operator() {
                 exTwo.splice(0, exTwo.length, ((parseInt(a2, 10)) / (parseInt(b2, 10))));
                 a1.splice(0, a1.length, ...exTwo);
                 exOne.splice(0, exOne.length);
+                dEx.splice(0,dEx.length, ...exTwo);
+
                 a2.splice(0, a2.length);
                 o2.splice(0, o2.length);
                 b2.splice(0, b2.length);

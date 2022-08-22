@@ -1,14 +1,44 @@
 
+#calcPage {
+    display: flex;
+    
+    background-color:rgb(205, 205, 150);
+    padding-top: 2%;
+   
+    
+    
+
+    
+
+}
+
+#space0 { 
+   
+}
+
+#space1 { 
+    width: 45%;
+    background-color:aliceblue;
+   
+}
+
+#space2 { 
+    width: 45%;
+    
+    background-color: aliceblue;
+
+}
+
 .container {
     display: flex; 
     flex-grow: 0;
     flex-direction: column;
     border-style: solid;
-  
-    border-color: aqua;
+    border-radius: 5px;
+    border-color: brown;
     width: 10%;
-    height: 25%;
-    background-color: aqua;
+    height: 20%;
+    background-color: brown;
     position: static;
     min-width: fit-content;
 
@@ -28,9 +58,11 @@
 .keyContainer {
     display: grid;
    border-style: solid;
-   border-color: aqua;  
+   border-color: brown;  
    padding: auto;
    width: auto;
+   padding: 1px;
+   margin: 1px;
 }
 
    
@@ -49,12 +81,14 @@
 
 .button {
     display: flex;
+    border-radius: 5px;
     background-color: darkgray;
     border-style: solid;
     border-width: thin;
     border-color: black;   
    align-items: center;
 }
+
 
 
 #calcKey7 { 
@@ -135,21 +169,21 @@
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 2 ;
-    background-color: chartreuse;
+    background-color: orange;
 }
 #calcKeyMinus {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end:3 ;
-    background-color: chartreuse;
+    background-color: orange;
 }
 #calcKeyTimes {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 3;
     grid-row-end:4;
-    background-color: chartreuse;
+    background-color: orange;
 
 }
 #calcKeyDivide {
@@ -157,13 +191,13 @@
     grid-column-end: 5;
     grid-row-start: 4;
     grid-row-end: 5 ;
-    background-color: chartreuse;
+    background-color:orange;
 }
 #calcKeyClear {
     grid-column-start: 4;
     grid-column-end: 5;
     grid-row-start: 5;
     grid-row-end: 6;
-    background-color: chartreuse;
+    background-color: orange;
 
 }
