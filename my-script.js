@@ -15,7 +15,9 @@ var placeHolder = ['0'];
 var dEx = [];
 var dEx2 = [];
 
-
+function roundToTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");
+}
 
 //display 
 
@@ -50,6 +52,8 @@ else if (a2.length >= 1 && o2.length >= 1 && exTwo.length < 1){         //show b
     console.log
 
 }
+
+
 
 
 
@@ -193,7 +197,7 @@ function touchA() {
     })
 
     document.getElementById("calcKey0").addEventListener("click", function () {
-        if (exOne.length < 1 && o1.length < 1 && a2.length < 1) {
+        if (exOne.length < 1 && pO1.length < 1 && a2.length < 1) {
             a1.push(0);
             dEx.push(0);
 
@@ -770,6 +774,7 @@ function touchO() {
         dEx.length = 0;
         dEx2.length = 0;
         pO1.length = 0; 
+        divByZero = 0.0;
 
 
 
@@ -807,7 +812,7 @@ function operator() {
                 console.log(a1);
                 b1.splice(0, b1.length, (b1.join('')));
                 console.log(b1);
-                exOne.splice(0, exOne.length, ((parseInt(a1, 10)) + (parseInt(b1, 10))));
+                exOne.splice(0, exOne.length, (roundToTwo((parseInt(a1, 10)) + (parseInt(b1, 10)))));
                 a2.splice(0, a2.length, ...exOne);
                 dEx.splice(0,dEx.length, ...exOne);
                 
@@ -840,7 +845,7 @@ function operator() {
                 console.log(a2);
                 b2.splice(0, b2.length, (b2.join('')));
                 console.log(b2);
-                exTwo.splice(0, exTwo.length, ((parseInt(a2, 10)) + (parseInt(b2, 10))));
+                exTwo.splice(0, exTwo.length, (roundToTwo((parseInt(a2, 10)) + (parseInt(b2, 10)))));
                 a1.splice(0, a1.length, ...exTwo);
                 exOne.splice(0, exOne.length);
                 dEx.splice(0,dEx.length, ...exTwo);
@@ -873,7 +878,7 @@ function operator() {
                 console.log(a1);
                 b1.splice(0, b1.length, (b1.join('')));
                 console.log(b1);
-                exOne.splice(0, exOne.length, ((parseInt(a1, 10)) - (parseInt(b1, 10))));
+                exOne.splice(0, exOne.length, (roundToTwo((parseInt(a1, 10)) - (parseInt(b1, 10)))));
                 a2.splice(0, a2.length, ...exOne);
                 dEx.splice(0,dEx.length, ...exOne);
                 exTwo.splice(0, exTwo.length);
@@ -901,7 +906,7 @@ function operator() {
                 console.log(a2);
                 b2.splice(0, b2.length, (b2.join('')));
                 console.log(b2);
-                exTwo.splice(0, exTwo.length, ((parseInt(a2, 10)) - (parseInt(b2, 10))));
+                exTwo.splice(0, exTwo.length, (roundToTwo((parseInt(a2, 10)) - (parseInt(b2, 10)))));
                 a1.splice(0, a1.length, ...exTwo);
                 exOne.splice(0, exOne.length);
                 dEx.splice(0,dEx.length, ...exTwo);
@@ -927,7 +932,7 @@ function operator() {
                 console.log(a1);
                 b1.splice(0, b1.length, (b1.join('')));
                 console.log(b1);
-                exOne.splice(0, exOne.length, ((parseInt(a1, 10)) * (parseInt(b1, 10))));
+                exOne.splice(0, exOne.length, (roundToTwo((parseInt(a1, 10)) * (parseInt(b1, 10)))));
                 a2.splice(0, a2.length, ...exOne);
                 dEx.splice(0,dEx.length, ...exOne);
                 exTwo.splice(0, exTwo.length);
@@ -955,7 +960,7 @@ function operator() {
                 console.log(a2);
                 b2.splice(0, b2.length, (b2.join('')));
                 console.log(b2);
-                exTwo.splice(0, exTwo.length, ((parseInt(a2, 10)) * (parseInt(b2, 10))));
+                exTwo.splice(0, exTwo.length, (roundToTwo((parseInt(a2, 10)) * (parseInt(b2, 10)))));
                 a1.splice(0, a1.length, ...exTwo);
                 dEx.splice(0,dEx.length, ...exTwo);
 
@@ -979,12 +984,12 @@ function operator() {
 
             }
 
-            else if (b1.length >= 1 && o1 == "/" && b1 !== 0 || b1.length >= 1 && o1 == "/" && eq1.length >= 1 && b1 !== 0) {
+            else if (b1.length >= 1 && o1 == "/" && b1 != 0 || b1.length >= 1 && o1 == "/" && eq1.length >= 1 && b1 != 0) {
                 a1.splice(0, a1.length, (a1.join('')));
                 console.log(a1);
                 b1.splice(0, b1.length, (b1.join('')));
                 console.log(b1);
-                exOne.splice(0, exOne.length, ((parseInt(a1, 10)) / (parseInt(b1, 10))));
+                exOne.splice(0, exOne.length, (roundToTwo((parseInt(a1, 10)) / (parseInt(b1, 10)))));
                 a2.splice(0, a2.length, ...exOne);
                 dEx.splice(0,dEx.length, ...exOne);
                 exTwo.splice(0, exTwo.length);
@@ -1007,13 +1012,13 @@ function operator() {
 
             }
 
-            else if (b2.length >= 1 && o2 == "/" && b2 !== 0 || b2.length >= 1 && eq2.length >= 1 && o2 == "/" && b2 !== 0) {
+            else if (b2.length >= 1 && o2 == "/" && b2 != 0 || b2.length >= 1 && eq2.length >= 1 && o2 == "/" && b2 != 0) {
 
                 a2.splice(0, a1.length, (a2.join('')));
                 console.log(a2);
                 b2.splice(0, b2.length, (b2.join('')));
                 console.log(b2);
-                exTwo.splice(0, exTwo.length, ((parseInt(a2, 10)) / (parseInt(b2, 10))));
+                exTwo.splice(0, exTwo.length, (roundToTwo((parseInt(a2, 10)) / (parseInt(b2, 10)))));
                 a1.splice(0, a1.length, ...exTwo);
                 exOne.splice(0, exOne.length);
                 dEx.splice(0,dEx.length, ...exTwo);
@@ -1036,16 +1041,29 @@ function operator() {
                 console.log(a1)
                 
             }
-            else if (b2.length >= 1 && o2 == "/" && b2 == 0 || b2.length >= 1 && eq2.length >= 1 && o2 == "/" && b2 == 0 || b1.length >= 1 && o1 == "/" && b1 !== 0 || b1.length >= 1 && o1 == "/" && eq1.length >= 1 && b1 !== 0) {
-                exTwo.splice(0, exTwo.length, ' division by zero ...D:');
-                a1.splice(0, a1.length, ...exTwo);
-                exOne.splice(0, exTwo.length, ' division by zero ...D:');
-                a2.splice(0, a1.length, ...exOne);
+            else if (b2.length >= 1 && o2 == "/" && b2 == 0 || b2.length >= 1 && eq2.length >= 1 && o2 == "/" && b2 == 0 || b1.length >= 1 && o1 == "/" && b1 == 0 || b1.length >= 1 && o1 == "/" && eq1.length >= 1 && b1 == 0) {
+                exTwo.splice(0, exTwo.length, '0.0 nooo');
+                a1.splice(0, a1.length, '0.0 nooo');
+                exOne.splice(0, exOne.length, '0.0 nooo');
+                a2.splice(0, a2.length, '0.0 nooo');
+                dEx.splice(0, dEx.length, '0.0 nooo');
+                dEx2.splice(0, dEx2.length, '0.0 nooo');
+                
+                showMe();
+
+                console.log(pO1);
+                console.log(a2);
+                console.log(exTwo)
+                console.log(b2);
+                console.log(o2);
+                console.log(o1);
+                console.log(a1)
+
+
     
                  
 
              }
-            
 
         })
     })
