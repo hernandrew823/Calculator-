@@ -239,13 +239,14 @@ function touchA() {
 }
 
 
-//document.getElementById("calcKeyDot").addEventListener ("click", function(){ 
-//  if (exOne.length < 1 && o1.length < 1) {
-//      a1.push(".");
-//       console.log(a1);
-//      showMe(); 
-//   }
-//} )
+document.getElementById("calcKeyDot").addEventListener ("click", function(){ 
+if (exOne.length < 1 && o1.length < 1) {
+   a1.push('.');
+   dEx.push('.')
+  console.log(a1);
+ showMe(); 
+ }
+} )
 function touchB() {
     
     {
@@ -440,16 +441,20 @@ function touchB() {
         }
     })
 
-    //document.getElementById("calcKeyDot").addEventListener( "click", function(){
-    //if (pO1.length >= 1) {
-    //  b1.push('.');
-    //console.log(b1);
-    //showMe();}
+    document.getElementById("calcKeyDot").addEventListener( "click", function(){
+    if (pO1.length >= 1) {
+     b1.push('.');
+     dEx2.push('.');
+    console.log(b1);
+    showMe();}
 
-    // else if (a2.length >= 1) {
-    //  b2.push('.');
-    // console.log(b2);
-    //  showMe();}}    
+ else if (a2.length >= 1) {
+      b2.push('.');
+      dEx2.push('.');
+    console.log(b2);
+      showMe();}
+    })  
+   
 
 
 
