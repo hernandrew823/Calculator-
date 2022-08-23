@@ -15,6 +15,11 @@ var placeHolder = ['0'];
 var dEx = [];
 var dEx2 = [];
 
+
+document.getElementById('space1').innerHTML 
+
+
+
 function roundToTwo(num) {
     return +(Math.round(num + "e+2")  + "e-2");
 }
