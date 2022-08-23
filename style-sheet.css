@@ -1,10 +1,13 @@
 
 #calcPage {
     display: flex;
+    flex-direction: column;
+    
     
     background-color:rgb(205, 205, 150);
     padding-top: 2%;
-   
+   height: 300px;
+   align-items: center;
     
     
 
@@ -19,11 +22,14 @@
 #space1 { display: flex;
     flex-direction: column;
     align-items: center;
-    width: 10%;
+    width: 20%;
     background-color:gold;
     color: brown;
     font-size: xx-large;
     min-width: fit-content;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: -5px;
     
     
    
@@ -35,11 +41,14 @@
     flex-direction: column;
     display: flex;
     justify-content:left;
-    width: 80%;
+    width: 20%;
     background-color: gold;
     color: brown;
     font-size: 32px;
     font-size: xx-large;
+    min-width: fit-content;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
 }
 
@@ -48,10 +57,10 @@
     
     flex-direction: column;
     border-style: solid;
-    border-radius: 5px;
+    
     border-color: brown;
-    width: 10%;
-    height: 40%;
+    width: 19.5%;
+    height: 300px;
     background-color: brown;
     
     min-width: fit-content;
@@ -74,9 +83,15 @@
    border-style: solid;
    border-color: brown;  
    padding: auto;
-   width: auto;
-   padding: 1px;
-   margin: 1px;
+   width: 80%;
+   height: 300px;
+   padding-left: 25px;
+  
+  
+   
+   
+   min-width: fit-content;
+   
 }
 
    
@@ -87,6 +102,9 @@
     
     border-style: solid;
     border-width: thin;
+    min-width: 40px;
+    justify-content: center;
+    align-items: center;    
     
 
 }
@@ -101,6 +119,8 @@
     border-width: thin;
     border-color: black;   
    align-items: center;
+   min-width: 40px;
+   justify-content: center;
 }
 
 
