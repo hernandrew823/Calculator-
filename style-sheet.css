@@ -19,10 +19,11 @@
 #space1 { display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
+    width: 10%;
     background-color:gold;
     color: brown;
-    font-size: x-large;
+    font-size: xx-large;
+    min-width: fit-content;
     
     
    
@@ -31,12 +32,14 @@
 
 
 #space2 { 
+    flex-direction: column;
     display: flex;
     justify-content:left;
-    width: 45%;
+    width: 80%;
     background-color: gold;
     color: brown;
     font-size: 32px;
+    font-size: xx-large;
 
 }
 
