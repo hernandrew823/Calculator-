@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap');
 #calcPage {
     display: flex;
     flex-direction: column;
@@ -40,13 +40,18 @@
 #space2 { 
     flex-direction: column;
     display: flex;
-    justify-content:left;
+    align-items: center;
+    justify-content: center;
+    
     width: 20%;
+    height: 20%;
     background-color: gold;
     color: brown;
-    font-size: 32px;
+    font-size: 18px;
+    font-family: 'Qwitcher Grypen', sans-serif;
     font-size: xx-large;
     min-width: fit-content;
+    font-weight:bolder;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 
